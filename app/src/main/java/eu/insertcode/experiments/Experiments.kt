@@ -16,13 +16,16 @@
 
 package eu.insertcode.experiments
 
-import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import eu.insertcode.experiments.experiments.animations.physicsBased.PhysicsBasedAnimationActivity
+import eu.insertcode.experiments.model.Experiment
 
-class MainActivity : AppCompatActivity() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
+/**
+ * Created by maarten on 2018-04-03.
+ * Copyright © 2018 insertCode.eu. All rights reserved.
+ */
+object Experiments {
+    @JvmStatic
+    val experiments = listOf(
+            Experiment(R.drawable.ic_touch_app, "Physics Based Movement", PhysicsBasedAnimationActivity::class.java)
+    )
 }

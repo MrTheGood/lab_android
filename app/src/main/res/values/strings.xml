@@ -16,4 +16,5 @@
 
 <resources>
     <string name="app_name">Experiments</string>
+    <string name="main_desc_experimentIndicator">Item indicator</string>
 </resources>

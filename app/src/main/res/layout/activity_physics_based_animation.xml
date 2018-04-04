@@ -15,27 +15,11 @@
   ~    limitations under the License.
   -->
 
-<manifest
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="eu.insertcode.experiments"
-    >
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".experiments.animations.physicsBased.PhysicsBasedAnimationActivity">
 
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        >
-        <activity android:name=".view.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".experiments.animations.physicsBased.PhysicsBasedAnimationActivity" />
-    </application>
-
-</manifest>
+</android.support.constraint.ConstraintLayout>
