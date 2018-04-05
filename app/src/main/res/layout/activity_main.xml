@@ -28,7 +28,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_main_experiment"
+        tools:listitem="@layout/item_experiment"
         />
 
 </merge>
