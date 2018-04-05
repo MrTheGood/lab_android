@@ -41,8 +41,7 @@ android {
 }
 
 dependencies {
-    final support_version = "27.1.0"
-
+    implementation project(':physicsbasedanimationsexperiment')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     kapt "com.android.databinding:compiler:3.1.0"

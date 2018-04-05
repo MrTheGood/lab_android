@@ -16,8 +16,9 @@
 
 package eu.insertcode.experiments
 
-import eu.insertcode.experiments.experiments.animations.physicsBased.PhysicsBasedAnimationActivity
+import eu.insertcode.experiment.physicsbasedanimations.SpringAnimActivity
 import eu.insertcode.experiments.model.Experiment
+import eu.insertcode.experiments.model.ExperimentCategory
 
 /**
  * Created by maarten on 2018-04-03.
@@ -26,6 +27,7 @@ import eu.insertcode.experiments.model.Experiment
 object Experiments {
     @JvmStatic
     val experiments = listOf(
-            Experiment(R.drawable.ic_touch_app, "Physics Based Movement", PhysicsBasedAnimationActivity::class.java)
+            ExperimentCategory("Physics Based Animations"),
+            Experiment(R.drawable.ic_touch_app, "Spring Animation", SpringAnimActivity::class.java)
     )
 }
