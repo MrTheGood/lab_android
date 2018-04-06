@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">PhysicsBasedAnimationsExperiment</string>
     <string name="desc_animSpringView">Drag me for animation</string>
+    <string name="desc_animFlingView">Fling anywhere for animation</string>
 </resources>

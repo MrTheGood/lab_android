@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flingViewLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FlingAnimActivity"
+    >
+
+    <ImageView
+        android:id="@+id/animatedFlingView"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_animated_fling_view"
+        android:contentDescription="@string/desc_animFlingView"
+        android:elevation="8dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="11dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:src="@drawable/ic_pan_tool"
+        android:tint="#ffffff"
+        tools:ignore="RtlHardcoded"
+        />
+
+</FrameLayout>

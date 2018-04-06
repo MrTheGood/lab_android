@@ -6,6 +6,7 @@
 
     <application>
         <activity android:name=".SpringAnimActivity" />
+        <activity android:name=".FlingAnimActivity" />
     </application>
 
 </manifest>
