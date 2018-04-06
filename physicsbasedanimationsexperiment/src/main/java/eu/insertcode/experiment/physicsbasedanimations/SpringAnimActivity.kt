@@ -37,13 +37,20 @@ class SpringAnimActivity : AppCompatActivity(), View.OnTouchListener {
             }
         })
 
-        val springForce = SpringForce(0f).apply {
+        val centerX = animatedSpringView.x
+        val centerY = animatedSpringView.y
+        val springForceX = SpringForce(centerX).apply {
             stiffness = SpringForce.STIFFNESS_MEDIUM
             dampingRatio = SpringForce.DAMPING_RATIO_HIGH_BOUNCY
         }
 
-        springAnimX.spring = springForce
-        springAnimY.spring = springForce
+        val springForceY = SpringForce(centerY).apply {
+            stiffness = SpringForce.STIFFNESS_MEDIUM
+            dampingRatio = SpringForce.DAMPING_RATIO_HIGH_BOUNCY
+        }
+
+        springAnimX.spring = springForceX
+        springAnimY.spring = springForceY
     }
 
     @SuppressLint("ClickableViewAccessibility")

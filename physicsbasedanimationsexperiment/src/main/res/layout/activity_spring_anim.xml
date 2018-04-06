@@ -7,12 +7,21 @@
     tools:context=".SpringAnimActivity"
     >
 
-    <View
+    <ImageView
         android:id="@+id/animatedSpringView"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:background="@color/colorAccent"
-        android:translationX="150dp"
-        android:translationY="150dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_animated_spring_view"
+        android:contentDescription="@string/desc_animSpringView"
+        android:elevation="8dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="11dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:src="@drawable/ic_pan_tool"
+        android:tint="#ffffff"
+        tools:ignore="RtlHardcoded"
         />
+
 </FrameLayout>
