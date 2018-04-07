@@ -1,5 +1,5 @@
 /*
- *    Copyright 2018. Maarten de Goede
+ *    Copyright 2018 Maarten de Goede
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -23,7 +23,7 @@ buildscript {
         jcenter()
     }
     ext {
-        support_version = "27.1.0"
+        support_version = "27.1.1"
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.0'
