@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~    Copyright 2018 Maarten de Goede
   ~
@@ -14,10 +15,12 @@
   ~    limitations under the License.
   -->
 
-<resources>
-    <string name="app_name">PhysicsBasedAnimationsExperiment</string>
-    <string name="desc_animSpringView">Drag me for animation</string>
-    <string name="desc_animFlingView">Fling anywhere for animation</string>
-    <string name="str_swipeUp">Swipe up to show an animated view</string>
-    <string name="str_swipeDown">Swipe down to hide the animated view</string>
-</resources>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    >
+
+    <corners android:radius="64dp" />
+    <solid android:color="@color/physicsBasedAnimationsColorAccent" />
+
+</shape>

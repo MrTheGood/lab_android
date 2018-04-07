@@ -15,12 +15,56 @@
   ~    limitations under the License.
   -->
 
-<FrameLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flingViewLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CombinedFlingSpringAnimActivity"
     >
 
-</FrameLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_arrow_upward"
+        android:tint="#88000000"
+        tools:ignore="contentDescription"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/str_swipeUp"
+        android:textColor="#88000000"
+        />
+
+    <FrameLayout
+        android:id="@+id/animatedFlingView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:elevation="8dp"
+        >
+
+        <ImageView
+            android:id="@+id/animatedSpringView"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_margin="32dp"
+            android:background="@drawable/bg_adnimated_combined_view"
+            android:padding="16dp"
+            android:src="@drawable/ic_keyboard_arrow_up"
+            android:tint="#ffffff"
+            tools:ignore="ContentDescription,RtlHardcoded"
+            />
+
+    </FrameLayout>
+
+</RelativeLayout>
