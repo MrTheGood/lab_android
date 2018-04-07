@@ -1,5 +1,5 @@
 /*
- *    Copyright 2018. Maarten de Goede
+ *    Copyright 2018 Maarten de Goede
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 
 package eu.insertcode.experiments
 
+import eu.insertcode.experiment.physicsbasedanimations.CombinedFlingSpringAnimActivity
 import eu.insertcode.experiment.physicsbasedanimations.FlingAnimActivity
 import eu.insertcode.experiment.physicsbasedanimations.SpringAnimActivity
 import eu.insertcode.experiments.model.Experiment
@@ -30,6 +31,7 @@ object Experiments {
     val experiments = listOf(
             ExperimentCategory("Physics Based Animations"),
             Experiment(R.drawable.ic_touch_app, "Spring Animation", SpringAnimActivity::class.java),
-            Experiment(R.drawable.ic_toll, "Fling Animation", FlingAnimActivity::class.java)
+            Experiment(R.drawable.ic_toll, "Fling Animation", FlingAnimActivity::class.java),
+            Experiment(R.drawable.ic_action_upload, "Combined Fling and Spring Animation", CombinedFlingSpringAnimActivity::class.java)
     )
 }
