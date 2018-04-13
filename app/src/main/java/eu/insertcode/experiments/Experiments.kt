@@ -16,6 +16,7 @@
 
 package eu.insertcode.experiments
 
+import eu.insertcode.experiment.multiplethemes.NightModeThemeActivity
 import eu.insertcode.experiment.physicsbasedanimations.CombinedFlingSpringAnimActivity
 import eu.insertcode.experiment.physicsbasedanimations.FlingAnimActivity
 import eu.insertcode.experiment.physicsbasedanimations.SpringAnimActivity
@@ -32,6 +33,9 @@ object Experiments {
             ExperimentCategory("Physics Based Animations"),
             Experiment(R.drawable.ic_touch_app, "Spring Animation", SpringAnimActivity::class.java),
             Experiment(R.drawable.ic_toll, "Fling Animation", FlingAnimActivity::class.java),
-            Experiment(R.drawable.ic_action_upload, "Combined Fling and Spring Animation", CombinedFlingSpringAnimActivity::class.java)
+            Experiment(R.drawable.ic_action_upload, "Combined Fling and Spring Animation", CombinedFlingSpringAnimActivity::class.java),
+
+            ExperimentCategory("Themes"),
+            Experiment(R.drawable.ic_brightness_4, "Night mode", NightModeThemeActivity::class.java)
     )
 }
