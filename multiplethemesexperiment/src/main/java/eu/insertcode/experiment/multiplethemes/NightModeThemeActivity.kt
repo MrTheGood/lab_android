@@ -19,11 +19,15 @@ package eu.insertcode.experiment.multiplethemes
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import eu.insertcode.multiplethemes.R
+import kotlinx.android.synthetic.main.activity_night_mode_theme.*
 
 class NightModeThemeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_night_mode_theme)
+
+        setSupportActionBar(toolbar)
     }
+
 }
