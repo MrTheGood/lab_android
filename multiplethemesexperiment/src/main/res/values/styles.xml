@@ -29,4 +29,11 @@
         </item>
         <item name="colorAccent">@color/experiment_multiplethemes_colorAccentInverse</item>
     </style>
+
+    <style name="AppTheme.Experiment.MultipleThemes.ExtraDark" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/experiment_multiplethemes_colorPrimaryExtraDark</item>
+        <item name="colorPrimaryDark">@color/experiment_multiplethemes_colorPrimaryDarkExtraDark
+        </item>
+        <item name="colorAccent">@color/experiment_multiplethemes_colorAccentExtraDark</item>
+    </style>
 </resources>

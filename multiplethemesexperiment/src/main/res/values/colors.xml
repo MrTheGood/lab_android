@@ -27,4 +27,10 @@
     <color name="experiment_multiplethemes_colorPrimaryInverse">#1565c0</color>
     <color name="experiment_multiplethemes_colorPrimaryDarkInverse">#01579b</color>
     <color name="experiment_multiplethemes_colorAccentInverse">#455a64</color>
+
+    <!-- Theme Extra Dark -->
+    <color name="experiment_multiplethemes_colorPrimaryLightExtraDark">#424242</color>
+    <color name="experiment_multiplethemes_colorPrimaryExtraDark">#212121</color>
+    <color name="experiment_multiplethemes_colorPrimaryDarkExtraDark">#000000</color>
+    <color name="experiment_multiplethemes_colorAccentExtraDark">#3e2723</color>
 </resources>

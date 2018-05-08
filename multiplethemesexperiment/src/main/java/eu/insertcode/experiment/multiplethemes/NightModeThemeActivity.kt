@@ -33,6 +33,7 @@ class NightModeThemeActivity : AppCompatActivity() {
 
         val theme = when (sharedPreferences.getString("theme", "")) {
             "Dark" -> R.style.AppTheme_Experiment_MultipleThemes_Dark
+            "ExtraDark" -> R.style.AppTheme_Experiment_MultipleThemes_ExtraDark
             else -> R.style.AppTheme_Experiment_MultipleThemes_Light
         }
         setTheme(theme)
@@ -43,7 +44,8 @@ class NightModeThemeActivity : AppCompatActivity() {
 
         multipleThemesExpermiment_fab.setOnClickListener {
             sharedPreferences.edit().putString("theme", when (sharedPreferences.getString("theme", "")) {
-                "Dark" -> "Light"
+                "Dark" -> "ExtraDark"
+                "ExtraDark" -> "Light"
                 else -> "Dark"
             }).apply()
 
