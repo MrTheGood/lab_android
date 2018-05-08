@@ -17,22 +17,16 @@
 
 <resources>
 
-    <style name="AppTheme.Experiment.MultipleThemes" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <style name="AppTheme.Experiment.MultipleThemes.Light" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/experiment_multiplethemes_colorPrimary</item>
         <item name="colorPrimaryDark">@color/experiment_multiplethemes_colorPrimaryDark</item>
         <item name="colorAccent">@color/experiment_multiplethemes_colorAccent</item>
+    </style>
 
-        <item name="android:textColorPrimary">@color/experiment_multiplethemes_textColorPrimary
+    <style name="AppTheme.Experiment.MultipleThemes.Dark" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/experiment_multiplethemes_colorPrimaryInverse</item>
+        <item name="colorPrimaryDark">@color/experiment_multiplethemes_colorPrimaryDarkInverse
         </item>
-        <item name="android:textColorSecondary">
-            @color/experiment_multiplethemes_textColorSecondary
-        </item>
-
-        <item name="android:textColorPrimaryInverse">
-            @color/experiment_multiplethemes_textColorPrimaryInverse
-        </item>
-        <item name="android:textColorSecondaryInverse">
-            @color/experiment_multiplethemes_textColorSecondaryInverse
-        </item>
+        <item name="colorAccent">@color/experiment_multiplethemes_colorAccentInverse</item>
     </style>
 </resources>

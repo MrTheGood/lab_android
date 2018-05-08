@@ -22,7 +22,7 @@
     <application>
         <activity
             android:name="eu.insertcode.experiment.multiplethemes.NightModeThemeActivity"
-            android:theme="@style/AppTheme.Experiment.MultipleThemes"
+            android:theme="@style/AppTheme.Experiment.MultipleThemes.Dark"
             />
     </application>
 

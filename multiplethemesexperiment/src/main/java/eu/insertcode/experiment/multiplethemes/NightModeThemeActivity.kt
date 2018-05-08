@@ -16,6 +16,9 @@
 
 package eu.insertcode.experiment.multiplethemes
 
+import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import eu.insertcode.multiplethemes.R
@@ -23,11 +26,31 @@ import kotlinx.android.synthetic.main.activity_night_mode_theme.*
 
 class NightModeThemeActivity : AppCompatActivity() {
 
+    lateinit var sharedPreferences: SharedPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        sharedPreferences = getSharedPreferences("MultipleThemesExperiment", Context.MODE_PRIVATE)
+
+        val theme = when (sharedPreferences.getString("theme", "")) {
+            "Dark" -> R.style.AppTheme_Experiment_MultipleThemes_Dark
+            else -> R.style.AppTheme_Experiment_MultipleThemes_Light
+        }
+        setTheme(theme)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_night_mode_theme)
+        setSupportActionBar(multipleThemesExpermiment_toolbar)
 
-        setSupportActionBar(toolbar)
+        multipleThemesExpermiment_fab.setOnClickListener {
+            sharedPreferences.edit().putString("theme", when (sharedPreferences.getString("theme", "")) {
+                "Dark" -> "Light"
+                else -> "Dark"
+            }).apply()
+
+            finish()
+            startActivity(Intent(this, NightModeThemeActivity::class.java))
+        }
     }
+
 
 }
