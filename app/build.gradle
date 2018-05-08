@@ -20,11 +20,11 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 'android-P'
     defaultConfig {
         applicationId "eu.insertcode.experiments"
         minSdkVersion 21
-        targetSdkVersion 27
+        targetSdkVersion 'P'
         versionCode 1
         versionName "0.1"
     }
@@ -36,6 +36,7 @@ android {
 dependencies {
     implementation project(':physicsbasedanimationsexperiment')
     implementation project(':multiplethemesexperiment')
+    implementation project(':androidpexperiment')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     kapt "com.android.databinding:compiler:3.1.2"

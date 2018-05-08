@@ -36,6 +36,9 @@ object Experiments {
             Experiment(R.drawable.ic_action_upload, "Combined Fling and Spring Animation", CombinedFlingSpringAnimActivity::class.java),
 
             ExperimentCategory("Themes"),
-            Experiment(R.drawable.ic_brightness_4, "Night mode", NightModeThemeActivity::class.java)
+            Experiment(R.drawable.ic_brightness_4, "Night mode", NightModeThemeActivity::class.java),
+
+            ExperimentCategory("Android P Developer Preview"),
+            Experiment(R.drawable.ic_brightness_4, "Material 2.0", NightModeThemeActivity::class.java)
     )
 }
