@@ -5,7 +5,10 @@
     >
 
     <application>
-        <activity android:name=".Material2Activity" />
+        <activity
+            android:name=".Material2Activity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
     </application>
 
 </manifest>
