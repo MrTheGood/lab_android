@@ -6,7 +6,7 @@
 
     <application>
         <activity
-            android:name=".Material2Activity"
+            android:name=".DesignLibraryV28Activity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             />
     </application>

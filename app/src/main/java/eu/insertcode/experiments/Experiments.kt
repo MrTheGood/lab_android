@@ -16,7 +16,7 @@
 
 package eu.insertcode.experiments
 
-import eu.insertcode.androidpexperiment.Material2Activity
+import eu.insertcode.androidpexperiment.DesignLibraryV28Activity
 import eu.insertcode.experiment.multiplethemes.NightModeThemeActivity
 import eu.insertcode.experiment.physicsbasedanimations.CombinedFlingSpringAnimActivity
 import eu.insertcode.experiment.physicsbasedanimations.FlingAnimActivity
@@ -40,6 +40,6 @@ object Experiments {
             Experiment(R.drawable.ic_brightness_4, "Night mode", NightModeThemeActivity::class.java),
 
             ExperimentCategory("Android P Developer Preview"),
-            Experiment(R.drawable.ic_action_android, "Material 2.0", Material2Activity::class.java)
+            Experiment(R.drawable.ic_action_android, "Design library v28", DesignLibraryV28Activity::class.java)
     )
 }

@@ -2,13 +2,13 @@ package eu.insertcode.androidpexperiment
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_material_2.*
+import kotlinx.android.synthetic.main.activity_design_library_v28.*
 
-class Material2Activity : AppCompatActivity() {
+class DesignLibraryV28Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_material_2)
+        setContentView(R.layout.activity_design_library_v28)
 
         appbar.replaceMenu(R.menu.menu)
     }
