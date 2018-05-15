@@ -11,5 +11,7 @@ class DesignLibraryV28Activity : AppCompatActivity() {
         setContentView(R.layout.activity_design_library_v28)
 
         appbar.replaceMenu(R.menu.menu)
+
+        chip2.setChipIconResource(R.drawable.ic_star)
     }
 }
