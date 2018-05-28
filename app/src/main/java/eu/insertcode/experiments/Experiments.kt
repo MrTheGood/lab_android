@@ -44,6 +44,6 @@ object Experiments {
             Experiment(R.drawable.ic_action_android, "Design library v28", DesignLibraryV28Activity::class.java),
 
             ExperimentCategory("Other Experiments"),
-            Experiment(R.drawable.ic_action_android, "Side Sheet Experiment", SideSheetDrawerActivity::class.java)
+            Experiment(R.drawable.ic_swap_horiz, "Side Sheet Experiment", SideSheetDrawerActivity::class.java)
     )
 }
