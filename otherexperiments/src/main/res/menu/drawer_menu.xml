@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_head"
+        android:icon="@drawable/ic_face"
+        android:title="head"
+        />
+
+    <item
+        android:id="@+id/menu_body"
+        android:icon="@drawable/ic_accessibility"
+        android:title="body"
+        />
+
+    <item
+        android:id="@+id/menu_tail"
+        android:icon="@drawable/ic_rowing"
+        android:title="tail"
+        />
+
+    <item
+        android:id="@+id/menu_footer"
+        android:icon="@drawable/ic_pets"
+        android:title="footer"
+        />
+
+</menu>
