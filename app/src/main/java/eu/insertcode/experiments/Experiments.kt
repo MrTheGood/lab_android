@@ -23,6 +23,7 @@ import eu.insertcode.experiment.physicsbasedanimations.FlingAnimActivity
 import eu.insertcode.experiment.physicsbasedanimations.SpringAnimActivity
 import eu.insertcode.experiments.model.Experiment
 import eu.insertcode.experiments.model.ExperimentCategory
+import eu.insertcode.otherexperiments.SideSheetDrawerActivity
 
 /**
  * Created by maarten on 2018-04-03.
@@ -40,6 +41,9 @@ object Experiments {
             Experiment(R.drawable.ic_brightness_4, "Night mode", NightModeThemeActivity::class.java),
 
             ExperimentCategory("Android P Developer Preview"),
-            Experiment(R.drawable.ic_action_android, "Design library v28", DesignLibraryV28Activity::class.java)
+            Experiment(R.drawable.ic_action_android, "Design library v28", DesignLibraryV28Activity::class.java),
+
+            ExperimentCategory("Other Experiments"),
+            Experiment(R.drawable.ic_action_android, "Side Sheet Experiment", SideSheetDrawerActivity::class.java)
     )
 }
