@@ -9,6 +9,7 @@
             android:name=".DesignLibraryV28Activity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             />
+        <activity android:name=".FingerprintDialogActivity" />
     </application>
 
 </manifest>
