@@ -18,7 +18,6 @@ package eu.insertcode.experiments.view
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.DividerItemDecoration
 import eu.insertcode.experiments.R
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -28,6 +27,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         main_recycler.adapter = ExperimentAdapter(this)
-        main_recycler.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
     }
 }

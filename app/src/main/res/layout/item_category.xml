@@ -31,15 +31,22 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#fff"
+        android:elevation="8dp"
         android:padding="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
         >
 
         <TextView
             android:id="@+id/category_title"
-            style="@style/TextAppearance.AppCompat.Title"
+            style="@style/TextAppearance.AppCompat.Subhead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{categoryViewModel.categoryTitle}"
+            android:textColor="#dd000000"
+            android:textStyle="bold"
             tools:text="@tools:sample/lorem"
             />
 
