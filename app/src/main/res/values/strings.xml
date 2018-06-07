@@ -16,5 +16,10 @@
 
 <resources>
     <string name="app_name">Experiments</string>
-    <string name="main_desc_experimentIndicator">Item indicator</string>
+
+    <string name="desc_experimentIndicator">Item indicator</string>
+    <string name="desc_experimentStateIndicator">State indicator</string>
+
+    <string name="str_devExperiment">This experiment is still in development!</string>
+    <string name="str_failedExperiment">This experiment has failed. You will not be able to see it.</string>
 </resources>

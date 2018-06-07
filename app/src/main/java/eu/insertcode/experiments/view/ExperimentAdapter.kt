@@ -16,6 +16,7 @@
 
 package eu.insertcode.experiments.view
 
+import android.content.Context
 import android.databinding.DataBindingUtil
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -33,7 +34,7 @@ import eu.insertcode.experiments.viewmodel.ExperimentViewModel
  * Created by maarten on 2018-03-30.
  * Copyright © 2018 insertCode.eu. All rights reserved.
  */
-class ExperimentAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class ExperimentAdapter(private val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     companion object {
         private const val VIEW_TYPE_CATEGORY = 0
         private const val VIEW_TYPE_EXPERIMENT = 1
@@ -70,7 +71,7 @@ class ExperimentAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = Experiments.experiments[position]
         if (item is Experiment && holder is ExperimentViewHolder) {
-            holder.binding.experimentViewModel = ExperimentViewModel(item)
+            holder.binding.experimentViewModel = ExperimentViewModel(context, item)
         } else if (item is ExperimentCategory && holder is CategoryViewHolder) {
             holder.binding.categoryViewModel = ExperimentCategoryViewModel(item)
         } else {

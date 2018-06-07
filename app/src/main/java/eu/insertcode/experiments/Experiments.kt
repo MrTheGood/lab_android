@@ -24,6 +24,7 @@ import eu.insertcode.experiment.physicsbasedanimations.FlingAnimActivity
 import eu.insertcode.experiment.physicsbasedanimations.SpringAnimActivity
 import eu.insertcode.experiments.model.Experiment
 import eu.insertcode.experiments.model.ExperimentCategory
+import eu.insertcode.experiments.model.ExperimentState
 import eu.insertcode.otherexperiments.SideSheetDrawerActivity
 
 /**
@@ -34,18 +35,18 @@ object Experiments {
     @JvmStatic
     val experiments = listOf(
             ExperimentCategory("Physics Based Animations"),
-            Experiment(R.drawable.ic_touch_app, "Spring Animation", SpringAnimActivity::class.java),
-            Experiment(R.drawable.ic_toll, "Fling Animation", FlingAnimActivity::class.java),
-            Experiment(R.drawable.ic_action_upload, "Combined Fling and Spring Animation", CombinedFlingSpringAnimActivity::class.java),
+            Experiment(R.drawable.ic_touch_app, "Spring Animation", ExperimentState.COMPLETED, SpringAnimActivity::class.java),
+            Experiment(R.drawable.ic_toll, "Fling Animation", ExperimentState.COMPLETED, FlingAnimActivity::class.java),
+            Experiment(R.drawable.ic_action_upload, "Combined Fling and Spring Animation", ExperimentState.COMPLETED, CombinedFlingSpringAnimActivity::class.java),
 
             ExperimentCategory("Themes"),
-            Experiment(R.drawable.ic_brightness_4, "Night mode", NightModeThemeActivity::class.java),
+            Experiment(R.drawable.ic_brightness_4, "Night mode", ExperimentState.COMPLETED, NightModeThemeActivity::class.java),
 
             ExperimentCategory("Android P Developer Preview"),
-            Experiment(R.drawable.ic_action_android, "Design library v28", DesignLibraryV28Activity::class.java),
-            Experiment(R.drawable.ic_fingerprint, "Biometric Prompt", FingerprintDialogActivity::class.java),
+            Experiment(R.drawable.ic_action_android, "Design library v28", ExperimentState.COMPLETED, DesignLibraryV28Activity::class.java),
+            Experiment(R.drawable.ic_fingerprint, "Biometric Prompt", ExperimentState.COMPLETED, FingerprintDialogActivity::class.java),
 
             ExperimentCategory("Other Experiments"),
-            Experiment(R.drawable.ic_swap_horiz, "Side Sheet Experiment", SideSheetDrawerActivity::class.java)
+            Experiment(R.drawable.ic_swap_horiz, "Side Sheet Experiment", ExperimentState.DEVELOPMENT, SideSheetDrawerActivity::class.java)
     )
 }

@@ -16,20 +16,49 @@
 
 package eu.insertcode.experiments.viewmodel
 
+import android.app.AlertDialog
+import android.content.Context
 import android.content.Intent
 import android.support.annotation.DrawableRes
 import android.view.View
+import android.widget.Toast
+import eu.insertcode.experiments.R
 import eu.insertcode.experiments.model.Experiment
+import eu.insertcode.experiments.model.ExperimentState
 
 /**
  * Created by maarten on 2018-03-30.
  * Copyright © 2018 insertCode.eu. All rights reserved.
  */
-class ExperimentViewModel(private val experiment: Experiment) {
+class ExperimentViewModel(
+        private val context: Context,
+        private val experiment: Experiment
+) {
     @DrawableRes
     fun getExperimentIcon() = experiment.icon
 
     fun getExperimentTitle() = experiment.title
 
-    val onClickedItem = View.OnClickListener { v -> v.context.startActivity(Intent(v.context, experiment.clazz)) }
+    @DrawableRes
+    fun getExperimentStateIcon() = when (experiment.state) {
+        ExperimentState.DEVELOPMENT -> R.drawable.ic_error_outline
+        ExperimentState.FAILED -> R.drawable.ic_error
+        ExperimentState.COMPLETED -> null
+    }
+
+    val onClickedItem = View.OnClickListener { v ->
+        @Suppress("NON_EXHAUSTIVE_WHEN")
+        when (experiment.state) {
+            ExperimentState.DEVELOPMENT -> Toast.makeText(context, R.string.str_devExperiment, Toast.LENGTH_LONG).show()
+            ExperimentState.FAILED -> {
+                AlertDialog.Builder(context)
+                        .setMessage(R.string.str_failedExperiment)
+                        .setPositiveButton(android.R.string.ok, null)
+                        .show()
+                return@OnClickListener
+            }
+        }
+
+        v.context.startActivity(Intent(v.context, experiment.clazz))
+    }
 }

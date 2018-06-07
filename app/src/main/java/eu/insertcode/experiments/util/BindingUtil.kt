@@ -25,8 +25,7 @@ import android.widget.ImageView
  * Copyright © 2018 insertCode.eu. All rights reserved.
  */
 @BindingAdapter("srcRes")
-fun setImageSrc(imageView: ImageView, @DrawableRes res: Int) {
-    imageView.setImageDrawable(
-            imageView.context.resources.getDrawable(res, null)
-    )
+fun setImageSrc(imageView: ImageView, @DrawableRes res: Int?) {
+    if (res == null) return
+    imageView.setImageDrawable(imageView.context.resources.getDrawable(res, null))
 }
