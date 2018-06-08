@@ -18,6 +18,7 @@ package eu.insertcode.experiments.util
 
 import android.databinding.BindingAdapter
 import android.support.annotation.DrawableRes
+import android.view.ViewGroup
 import android.widget.ImageView
 
 /**
@@ -29,3 +30,13 @@ fun setImageSrc(imageView: ImageView, @DrawableRes res: Int?) {
     if (res == null) return
     imageView.setImageDrawable(imageView.context.resources.getDrawable(res, null))
 }
+
+
+@BindingAdapter("bindingMarginTop")
+fun setBindingTop(view: ViewGroup, px: Int?) {
+    if (px == null) return
+    val params = view.layoutParams as ViewGroup.MarginLayoutParams
+    params.topMargin = px
+    view.requestLayout()
+}
+

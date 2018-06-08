@@ -73,7 +73,7 @@ class ExperimentAdapter(private val context: Context) : RecyclerView.Adapter<Rec
         if (item is Experiment && holder is ExperimentViewHolder) {
             holder.binding.experimentViewModel = ExperimentViewModel(context, item, position)
         } else if (item is ExperimentCategory && holder is CategoryViewHolder) {
-            holder.binding.categoryViewModel = ExperimentCategoryViewModel(item)
+            holder.binding.categoryViewModel = ExperimentCategoryViewModel(context, item, position)
         } else {
             throw IllegalStateException("Experiment Item and ViewHolder don't match!")
         }
