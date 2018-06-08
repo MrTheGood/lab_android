@@ -20,6 +20,7 @@ import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.support.annotation.DrawableRes
+import android.support.v4.content.ContextCompat
 import android.view.View
 import android.widget.Toast
 import eu.insertcode.experiments.R
@@ -32,12 +33,32 @@ import eu.insertcode.experiments.model.ExperimentState
  */
 class ExperimentViewModel(
         private val context: Context,
-        private val experiment: Experiment
+        private val experiment: Experiment,
+        private val position: Int
 ) {
+    companion object {
+        @JvmStatic
+        val colors = arrayListOf(
+                R.color.experimentBackground1,
+                R.color.experimentBackground2,
+                R.color.experimentBackground3,
+                R.color.experimentBackground4,
+                R.color.experimentBackground5,
+                R.color.experimentBackground6,
+                R.color.experimentBackground7,
+                R.color.experimentBackground8,
+                R.color.experimentBackground9
+        )
+    }
+
     @DrawableRes
     fun getExperimentIcon() = experiment.icon
 
     fun getExperimentTitle() = experiment.title
+
+    fun getExperimentSubtitle() = experiment.subtitle
+
+    fun getExperimentIconBackgroundColor() = ContextCompat.getColor(context, colors[position % colors.size])
 
     @DrawableRes
     fun getExperimentStateIcon() = when (experiment.state) {

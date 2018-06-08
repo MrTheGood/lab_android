@@ -23,4 +23,15 @@
 
     <color name="windowBackground">#f5f5f5</color>
     <color name="ic_launcher_background">#F8F8F8</color>
+
+
+    <color name="experimentBackground1">#d500f9</color>
+    <color name="experimentBackground2">#64dd17</color>
+    <color name="experimentBackground3">#0091ea</color>
+    <color name="experimentBackground4">#18ffff</color>
+    <color name="experimentBackground5">#6200ea</color>
+    <color name="experimentBackground6">#f50057</color>
+    <color name="experimentBackground7">#00ff00</color>
+    <color name="experimentBackground8">#ffc400</color>
+    <color name="experimentBackground9">#ff9100</color>
 </resources>

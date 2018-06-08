@@ -20,4 +20,10 @@ package eu.insertcode.experiments.model
  * Created by maarten on 2018-03-30.
  * Copyright © 2018 insertCode.eu. All rights reserved.
  */
-data class Experiment(val icon: Int, val title: String, val state: ExperimentState, val clazz: Class<*>?)
+data class Experiment(
+        val icon: Int,
+        val title: String,
+        val subtitle: String,
+        val state: ExperimentState,
+        val clazz: Class<*>?
+)

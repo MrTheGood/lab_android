@@ -17,6 +17,7 @@
 
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     >
 
@@ -28,7 +29,7 @@
             />
     </data>
 
-    <LinearLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#fff"
@@ -36,18 +37,26 @@
         android:foreground="?selectableItemBackground"
         android:onClick="@{experimentViewModel.onClickedItem}"
         android:orientation="horizontal"
-        android:padding="8dp"
+        android:paddingStart="8dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="16dp"
         >
 
         <ImageView
             android:id="@+id/experiment_indicator"
             srcRes="@{experimentViewModel.experimentIcon}"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/experiment_indicator_background"
             android:layout_margin="8dp"
+            android:backgroundTint="@{experimentViewModel.experimentIconBackgroundColor}"
             android:contentDescription="@string/desc_experimentIndicator"
+            android:padding="9dp"
             android:scaleType="centerInside"
-            tools:src="@drawable/ic_touch_app"
+            android:tint="#fff"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:src="@drawable/ic_action_android"
             />
 
         <TextView
@@ -56,10 +65,34 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="16dp"
             android:layout_weight="1"
             android:gravity="center_vertical"
+            android:maxLines="1"
+            android:singleLine="true"
             android:text="@{experimentViewModel.experimentTitle}"
+            app:layout_constraintEnd_toStartOf="@+id/experiment_state"
+            app:layout_constraintStart_toEndOf="@id/experiment_indicator"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/lorem"
+            />
+
+        <TextView
+            android:id="@+id/experiment_subtitle"
+            style="@style/TextAppearance.AppCompat.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@{experimentViewModel.experimentSubtitle}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/experiment_state"
+            app:layout_constraintStart_toEndOf="@id/experiment_indicator"
+            app:layout_constraintTop_toBottomOf="@id/experiment_title"
             tools:text="@tools:sample/lorem"
             />
 
@@ -72,8 +105,11 @@
             android:contentDescription="@string/desc_experimentStateIndicator"
             android:scaleType="centerInside"
             android:tint="#ef5350"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:src="@drawable/ic_error_outline"
             />
 
-    </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
 </layout>

@@ -71,7 +71,7 @@ class ExperimentAdapter(private val context: Context) : RecyclerView.Adapter<Rec
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = Experiments.experiments[position]
         if (item is Experiment && holder is ExperimentViewHolder) {
-            holder.binding.experimentViewModel = ExperimentViewModel(context, item)
+            holder.binding.experimentViewModel = ExperimentViewModel(context, item, position)
         } else if (item is ExperimentCategory && holder is CategoryViewHolder) {
             holder.binding.categoryViewModel = ExperimentCategoryViewModel(item)
         } else {
