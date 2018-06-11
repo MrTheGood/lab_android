@@ -33,7 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#fff"
-        android:elevation="8dp"
+        android:elevation="4dp"
         android:foreground="?selectableItemBackground"
         android:onClick="@{experimentViewModel.onClickedItem}"
         android:orientation="horizontal"

@@ -17,5 +17,5 @@ class ExperimentCategoryViewModel(
 
     fun getCategoryMarginTop(): Int =
             if (position == 0) 0
-            else TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 16f, context.resources.displayMetrics).toInt()
+            else TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 8f, context.resources.displayMetrics).toInt()
 }

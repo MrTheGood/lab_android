@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         bindingMarginTop="@{categoryViewModel.categoryMarginTop}"
         android:background="#fff"
-        android:elevation="8dp"
+        android:elevation="4dp"
         android:padding="8dp"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
