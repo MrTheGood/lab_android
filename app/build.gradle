@@ -37,6 +37,7 @@ dependencies {
     implementation project(':physicsbasedanimationsexperiment')
     implementation project(':multiplethemesexperiment')
     implementation project(':androidpexperiment')
+    implementation project(':architectureexperiment')
     implementation project(':otherexperiments')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"

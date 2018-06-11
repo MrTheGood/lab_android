@@ -18,4 +18,5 @@ include ':app',
         ':physicsbasedanimationsexperiment',
         ':multiplethemesexperiment',
         ':androidpexperiment',
+        ':architectureexperiment',
         ':otherexperiments'

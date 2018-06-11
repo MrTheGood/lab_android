@@ -18,6 +18,7 @@ package eu.insertcode.experiments
 
 import eu.insertcode.androidpexperiment.DesignLibraryV28Activity
 import eu.insertcode.androidpexperiment.FingerprintDialogActivity
+import eu.insertcode.architectureexperiment.ArchitectureComponentsActivity
 import eu.insertcode.experiment.multiplethemes.NightModeThemeActivity
 import eu.insertcode.experiment.physicsbasedanimations.CombinedFlingSpringAnimActivity
 import eu.insertcode.experiment.physicsbasedanimations.FlingAnimActivity
@@ -45,6 +46,9 @@ object Experiments {
             ExperimentCategory("Android P Developer Preview"),
             Experiment(R.drawable.ic_action_android, "Design library v28", "Testing the new support library components", ExperimentState.COMPLETED, DesignLibraryV28Activity::class.java),
             Experiment(R.drawable.ic_fingerprint, "Biometric Prompt", "Testing the new Android P fingerprint dialog", ExperimentState.COMPLETED, FingerprintDialogActivity::class.java),
+
+            ExperimentCategory("App Architecture"),
+            Experiment(R.drawable.ic_build, "Architecture Components", "A simple app to test out Android Architecture Components", ExperimentState.DEVELOPMENT, ArchitectureComponentsActivity::class.java),
 
             ExperimentCategory("Other Experiments"),
             Experiment(R.drawable.ic_swap_horiz, "Side Sheet Experiment", "A work in progress navigation component", ExperimentState.DEVELOPMENT, SideSheetDrawerActivity::class.java)
