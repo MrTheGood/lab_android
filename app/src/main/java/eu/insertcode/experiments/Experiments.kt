@@ -18,7 +18,7 @@ package eu.insertcode.experiments
 
 import eu.insertcode.androidpexperiment.DesignLibraryV28Activity
 import eu.insertcode.androidpexperiment.FingerprintDialogActivity
-import eu.insertcode.architectureexperiment.ArchitectureComponentsActivity
+import eu.insertcode.architectureexperiment.view.activity.ArchitectureComponentsActivity
 import eu.insertcode.experiment.multiplethemes.NightModeThemeActivity
 import eu.insertcode.experiment.physicsbasedanimations.CombinedFlingSpringAnimActivity
 import eu.insertcode.experiment.physicsbasedanimations.FlingAnimActivity
