@@ -17,20 +17,55 @@
 package eu.insertcode.architectureexperiment.view.activity
 
 import android.os.Bundle
+import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import eu.insertcode.architectureexperiment.R
 import eu.insertcode.architectureexperiment.view.fragment.ArticleFragment
+import eu.insertcode.architectureexperiment.view.fragment.ArticleListFragment
 
 class ArchitectureComponentsActivity : AppCompatActivity() {
+    var currentFragment: Fragment? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_architecture_components)
 
         if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                    .add(R.id.activity_arch_root, ArticleFragment.newInstance(0))
-                    .commit()
+            showFragment(ArticleListFragment.newInstance(), false)
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        currentFragment = supportFragmentManager.fragments.firstOrNull { !it.isHidden }
+    }
+
+    override fun onBackPressed() {
+        val listFragment = supportFragmentManager.findFragmentByTag(ArticleListFragment::class.java.simpleName)
+        if (currentFragment is ArticleFragment && listFragment != null) {
+            showFragment(listFragment, false)
+        } else super.onBackPressed()
+    }
+
+    fun showFragment(fragment: Fragment, addToBackStack: Boolean) {
+        val current = currentFragment
+        currentFragment = fragment
+
+        if (current === currentFragment) {
+            return
+        }
+
+        supportFragmentManager.beginTransaction().run {
+            if (!fragment.isAdded) add(R.id.activity_arch_root, fragment, fragment.javaClass.simpleName)
+            else if (fragment.isDetached) attach(fragment)
+            else if (fragment.isHidden) show(fragment)
+
+            if (addToBackStack) addToBackStack(fragment.javaClass.simpleName)
+
+            if (current != null) {
+                hide(current)
+            }
+            commitAllowingStateLoss()
         }
     }
 }

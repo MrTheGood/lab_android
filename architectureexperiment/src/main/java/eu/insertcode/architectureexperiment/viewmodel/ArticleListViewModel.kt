@@ -22,19 +22,12 @@ import android.arch.lifecycle.ViewModel
 import eu.insertcode.architectureexperiment.MockData
 import eu.insertcode.architectureexperiment.data.Article
 
-/**
- * Created by maartendegoede on 12/06/2018.
- * Copyright © 2018 insertcode.eu. All rights reserved.
- */
-class ArticleViewModel : ViewModel() {
-    var articleId: Int = -1
-    lateinit var article: LiveData<Article>
+class ArticleListViewModel : ViewModel() {
+    lateinit var articles: LiveData<List<Article>>
 
-    fun init(id: Int) {
-        articleId = id
-        article = MutableLiveData<Article>().apply {
-            value = MockData.articles[articleId]
+    fun init() {
+        articles = MutableLiveData<List<Article>>().apply {
+            value = MockData.articles
         }
-        //todo: set article
     }
 }
