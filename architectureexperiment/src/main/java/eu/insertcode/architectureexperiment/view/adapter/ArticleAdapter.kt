@@ -23,8 +23,6 @@ import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import eu.insertcode.architectureexperiment.R
 import eu.insertcode.architectureexperiment.data.Article
-import eu.insertcode.architectureexperiment.view.activity.ArchitectureComponentsActivity
-import eu.insertcode.architectureexperiment.view.fragment.ArticleFragment
 import kotlinx.android.synthetic.main.item_article.view.*
 
 /**
@@ -32,13 +30,13 @@ import kotlinx.android.synthetic.main.item_article.view.*
  * Copyright © 2018 insertCode.eu. All rights reserved.
  */
 class ArticleAdapter(
-        private val activity: ArchitectureComponentsActivity,
+        private val onItemClick: (Int) -> Unit,
         private val articles: List<Article>
 ) : RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
             ArticleViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_article, parent, false).apply {
                 setOnClickListener { v ->
-                    if (v.tag is Int) activity.showFragment(ArticleFragment.newInstance(v.tag as Int), true)
+                    if (v.tag is Int) onItemClick(v.tag as Int)
                 }
             })
 

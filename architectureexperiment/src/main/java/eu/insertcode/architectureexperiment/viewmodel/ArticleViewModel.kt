@@ -22,19 +22,30 @@ import android.arch.lifecycle.ViewModel
 import eu.insertcode.architectureexperiment.MockData
 import eu.insertcode.architectureexperiment.data.Article
 
-/**
- * Created by maartendegoede on 12/06/2018.
- * Copyright © 2018 insertcode.eu. All rights reserved.
- */
 class ArticleViewModel : ViewModel() {
-    var articleId: Int = -1
-    lateinit var article: LiveData<Article>
+    lateinit var articles: LiveData<List<Article>>
 
-    fun init(id: Int) {
-        articleId = id
-        article = MutableLiveData<Article>().apply {
-            value = MockData.articles[articleId]
+    private var selectedPosition: Int? = null
+
+    val selectedArticle: LiveData<Article>?
+        get() =
+            if (selectedPosition != null && selectedPosition!! in articles.value!!.indices)
+                MutableLiveData<Article>().apply { value = articles.value!![selectedPosition!!] }
+            else null
+
+
+    fun init() {
+        articles = MutableLiveData<List<Article>>().apply {
+            value = MockData.articles
         }
-        //todo: set article
+        //todo: load from cache
+    }
+
+    @Suppress("LiftReturnOrAssignment")
+    fun select(position: Int) {
+        if (position in articles.value!!.indices)
+            selectedPosition = position
+        else
+            selectedPosition = null
     }
 }

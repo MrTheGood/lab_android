@@ -29,24 +29,14 @@ import eu.insertcode.architectureexperiment.data.Article
 import eu.insertcode.architectureexperiment.viewmodel.ArticleViewModel
 import kotlinx.android.synthetic.main.fragment_article.*
 
-const val ARGUMENT_ARTICLE_ID = "eu.insertcode.architectureexperiment.view.fragment.ArticleFragment.ARGUMENT_ARTICLE_ID"
-
 class ArticleFragment : Fragment() {
-    companion object {
-        fun newInstance(articleId: Int) = ArticleFragment().apply {
-            arguments = Bundle().apply { putInt(ARGUMENT_ARTICLE_ID, articleId) }
-        }
-    }
-
     private lateinit var viewModel: ArticleViewModel
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val articleId = arguments?.getInt(ARGUMENT_ARTICLE_ID) ?: -1
-        viewModel = ViewModelProviders.of(this).get(ArticleViewModel::class.java)
-        viewModel.init(articleId)
 
-        viewModel.article.observe(this, Observer<Article> { article ->
+        viewModel = ViewModelProviders.of(requireActivity()).get(ArticleViewModel::class.java)
+        viewModel.selectedArticle?.observe(this, Observer<Article> { article ->
             Glide.with(arch_article_thumbnail).load(article?.thumbnailUrl).into(arch_article_thumbnail)
             arch_article_title.text = article?.title
             arch_article_text.text = article?.article

@@ -31,7 +31,7 @@ class ArchitectureComponentsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_architecture_components)
 
         if (savedInstanceState == null) {
-            showFragment(ArticleListFragment.newInstance(), false)
+            showFragment(ArticleListFragment(), false)
         }
     }
 

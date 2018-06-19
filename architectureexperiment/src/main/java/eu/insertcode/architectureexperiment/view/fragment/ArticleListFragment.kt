@@ -26,30 +26,27 @@ import android.view.ViewGroup
 import eu.insertcode.architectureexperiment.R
 import eu.insertcode.architectureexperiment.view.activity.ArchitectureComponentsActivity
 import eu.insertcode.architectureexperiment.view.adapter.ArticleAdapter
-import eu.insertcode.architectureexperiment.viewmodel.ArticleListViewModel
+import eu.insertcode.architectureexperiment.viewmodel.ArticleViewModel
 import kotlinx.android.synthetic.main.article_list_fragment.*
 
 
 class ArticleListFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = ArticleListFragment()
-    }
-
-    private lateinit var viewModel: ArticleListViewModel
+    private lateinit var viewModel: ArticleViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?) =
             inflater.inflate(R.layout.article_list_fragment, container, false)
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(ArticleListViewModel::class.java)
+        viewModel = ViewModelProviders.of(requireActivity()).get(ArticleViewModel::class.java)
         viewModel.init()
 
         viewModel.articles.observe(this, Observer { articles ->
             viewRoot.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
-            viewRoot.adapter = ArticleAdapter(activity as ArchitectureComponentsActivity, articles
-                    ?: emptyList())
+            viewRoot.adapter = ArticleAdapter({ position ->
+                viewModel.select(position)
+                (activity as ArchitectureComponentsActivity).showFragment(ArticleFragment(), true)
+            }, articles ?: emptyList())
         })
     }
 
