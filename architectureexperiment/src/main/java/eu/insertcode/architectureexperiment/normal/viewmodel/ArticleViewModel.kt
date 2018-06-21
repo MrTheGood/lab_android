@@ -16,36 +16,29 @@
 
 package eu.insertcode.architectureexperiment.normal.viewmodel
 
-import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import eu.insertcode.architectureexperiment.MockData
 import eu.insertcode.architectureexperiment.data.Article
 
 class ArticleViewModel : ViewModel() {
-    lateinit var articles: LiveData<List<Article>>
+    val articles = MutableLiveData<List<Article>>()
 
-    private var selectedPosition: Int? = null
-
-    val selectedArticle: LiveData<Article>?
-        get() =
-            if (selectedPosition != null && selectedPosition!! in articles.value!!.indices)
-                MutableLiveData<Article>().apply { value = articles.value!![selectedPosition!!] }
-            else null
+    val selectedArticle = MutableLiveData<Article>()
+    private var selectedPosition = -1
+        set(value) {
+            field = value
+            selectedArticle.value = articles.value?.getOrNull(value ?: -1)
+        }
 
 
     fun init() {
-        articles = MutableLiveData<List<Article>>().apply {
-            value = MockData.articles
-        }
+        articles.value = MockData.articles
         //todo: load from cache
     }
 
     @Suppress("LiftReturnOrAssignment")
     fun select(position: Int) {
-        if (position in articles.value!!.indices)
-            selectedPosition = position
-        else
-            selectedPosition = null
+        selectedPosition = position
     }
 }
