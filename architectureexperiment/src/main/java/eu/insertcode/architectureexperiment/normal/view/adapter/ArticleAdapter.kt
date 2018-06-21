@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package eu.insertcode.architectureexperiment.view.adapter
+package eu.insertcode.architectureexperiment.normal.view.adapter
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater

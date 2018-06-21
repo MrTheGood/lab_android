@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package eu.insertcode.architectureexperiment.viewmodel
+package eu.insertcode.architectureexperiment.normal.viewmodel
 
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData

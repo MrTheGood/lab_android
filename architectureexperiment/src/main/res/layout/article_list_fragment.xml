@@ -24,6 +24,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-    tools:context=".view.fragment.ArticleListFragment"
+    tools:context=".normal.view.fragment.ArticleListFragment"
     tools:listitem="@layout/item_article"
     />

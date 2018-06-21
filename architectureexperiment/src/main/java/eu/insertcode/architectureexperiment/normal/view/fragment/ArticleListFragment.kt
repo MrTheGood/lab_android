@@ -14,36 +14,40 @@
  *    limitations under the License.
  */
 
-package eu.insertcode.architectureexperiment.view.fragment
+package eu.insertcode.architectureexperiment.normal.view.fragment
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.widget.DividerItemDecoration
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import com.bumptech.glide.Glide
 import eu.insertcode.architectureexperiment.R
-import eu.insertcode.architectureexperiment.data.Article
-import eu.insertcode.architectureexperiment.viewmodel.ArticleViewModel
-import kotlinx.android.synthetic.main.fragment_article.*
+import eu.insertcode.architectureexperiment.normal.view.activity.ArchitectureComponentsActivity
+import eu.insertcode.architectureexperiment.normal.view.adapter.ArticleAdapter
+import eu.insertcode.architectureexperiment.normal.viewmodel.ArticleViewModel
+import kotlinx.android.synthetic.main.article_list_fragment.*
 
-class ArticleFragment : Fragment() {
+
+class ArticleListFragment : Fragment() {
     private lateinit var viewModel: ArticleViewModel
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?) =
+            inflater.inflate(R.layout.article_list_fragment, container, false)
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
         viewModel = ViewModelProviders.of(requireActivity()).get(ArticleViewModel::class.java)
-        viewModel.selectedArticle?.observe(this, Observer<Article> { article ->
-            Glide.with(arch_article_thumbnail).load(article?.thumbnailUrl).into(arch_article_thumbnail)
-            arch_article_title.text = article?.title
-            arch_article_text.text = article?.article
+        viewModel.init()
+
+        viewModel.articles.observe(this, Observer { articles ->
+            viewRoot.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
+            viewRoot.adapter = ArticleAdapter({ position ->
+                viewModel.select(position)
+                (activity as ArchitectureComponentsActivity).showFragment(ArticleFragment(), true)
+            }, articles ?: emptyList())
         })
     }
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
-            inflater.inflate(R.layout.fragment_article, container, false)
 
 }

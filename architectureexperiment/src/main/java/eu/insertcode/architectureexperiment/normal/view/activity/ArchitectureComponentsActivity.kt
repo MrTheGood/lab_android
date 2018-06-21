@@ -14,14 +14,14 @@
  *    limitations under the License.
  */
 
-package eu.insertcode.architectureexperiment.view.activity
+package eu.insertcode.architectureexperiment.normal.view.activity
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import eu.insertcode.architectureexperiment.R
-import eu.insertcode.architectureexperiment.view.fragment.ArticleFragment
-import eu.insertcode.architectureexperiment.view.fragment.ArticleListFragment
+import eu.insertcode.architectureexperiment.normal.view.fragment.ArticleFragment
+import eu.insertcode.architectureexperiment.normal.view.fragment.ArticleListFragment
 
 class ArchitectureComponentsActivity : AppCompatActivity() {
     var currentFragment: Fragment? = null

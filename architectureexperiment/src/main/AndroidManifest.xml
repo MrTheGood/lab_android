@@ -21,7 +21,7 @@
     >
 
     <application>
-        <activity android:name=".view.activity.ArchitectureComponentsActivity" />
+        <activity android:name=".normal.view.activity.ArchitectureComponentsActivity" />
     </application>
 
 </manifest>
