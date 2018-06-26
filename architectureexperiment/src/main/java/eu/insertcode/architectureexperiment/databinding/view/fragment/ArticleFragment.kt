@@ -28,16 +28,11 @@ import eu.insertcode.architectureexperiment.databinding.FragmentArticleDatabindi
 import eu.insertcode.architectureexperiment.databinding.viewmodel.ArticleViewModel
 
 class ArticleFragment : Fragment() {
-    private lateinit var binding: FragmentArticleDatabindingBinding
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-        binding.articleViewModel = ViewModelProviders.of(requireActivity()).get(ArticleViewModel::class.java)
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_article_databinding, container, false)
+        val binding: FragmentArticleDatabindingBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_article_databinding, container, false)
+        binding.setLifecycleOwner(this)
+        binding.articleViewModel = ViewModelProviders.of(requireActivity()).get(ArticleViewModel::class.java)
         return binding.root
     }
 
