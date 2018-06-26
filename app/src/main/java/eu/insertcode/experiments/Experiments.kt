@@ -18,6 +18,7 @@ package eu.insertcode.experiments
 
 import eu.insertcode.androidpexperiment.DesignLibraryV28Activity
 import eu.insertcode.androidpexperiment.FingerprintDialogActivity
+import eu.insertcode.architectureexperiment.databinding.view.activity.ArchitectureComponentsDataBindingActivity
 import eu.insertcode.architectureexperiment.normal.view.activity.ArchitectureComponentsActivity
 import eu.insertcode.experiment.multiplethemes.NightModeThemeActivity
 import eu.insertcode.experiment.physicsbasedanimations.CombinedFlingSpringAnimActivity
@@ -49,6 +50,7 @@ object Experiments {
 
             ExperimentCategory("App Architecture"),
             Experiment(R.drawable.ic_build, "Architecture Components", "A simple app to test out Android Architecture Components", ExperimentState.DEVELOPMENT, ArchitectureComponentsActivity::class.java),
+            Experiment(R.drawable.ic_link, "Architecture Components Databinding", "A simple app to test out Android Architecture Components with databinding", ExperimentState.DEVELOPMENT, ArchitectureComponentsDataBindingActivity::class.java),
 
             ExperimentCategory("Other Experiments"),
             Experiment(R.drawable.ic_swap_horiz, "Side Sheet Experiment", "A work in progress navigation component", ExperimentState.DEVELOPMENT, SideSheetDrawerActivity::class.java)
