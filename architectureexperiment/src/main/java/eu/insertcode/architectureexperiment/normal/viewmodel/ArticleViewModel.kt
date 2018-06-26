@@ -23,13 +23,7 @@ import eu.insertcode.architectureexperiment.data.Article
 
 class ArticleViewModel : ViewModel() {
     val articles = MutableLiveData<List<Article>>()
-
     val selectedArticle = MutableLiveData<Article>()
-    private var selectedPosition = -1
-        set(value) {
-            field = value
-            selectedArticle.value = articles.value?.getOrNull(value ?: -1)
-        }
 
 
     fun init() {
@@ -37,8 +31,7 @@ class ArticleViewModel : ViewModel() {
         //todo: load from cache
     }
 
-    @Suppress("LiftReturnOrAssignment")
     fun select(position: Int) {
-        selectedPosition = position
+        selectedArticle.value = articles.value?.getOrNull(position)
     }
 }
