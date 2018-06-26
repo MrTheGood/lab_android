@@ -16,14 +16,13 @@
 
 package eu.insertcode.architectureexperiment.databinding.view.adapter
 
+import android.databinding.DataBindingUtil
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import com.bumptech.glide.Glide
 import eu.insertcode.architectureexperiment.R
 import eu.insertcode.architectureexperiment.data.Article
-import kotlinx.android.synthetic.main.item_article.view.*
+import eu.insertcode.architectureexperiment.databinding.ItemArticleDatabindingBinding
 
 /**
  * Created by maartendegoede on 18/06/2018.
@@ -39,26 +38,18 @@ class ArticleAdapter(
             notifyDataSetChanged()
         }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-            ArticleViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_article, parent, false).apply {
-                setOnClickListener { v -> if (v.tag is Int) onItemClick(v.tag as Int) }
-            })
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticleViewHolder {
+        val holder = ArticleViewHolder(DataBindingUtil.inflate(LayoutInflater.from(parent.context), R.layout.item_article_databinding, parent, false))
+        holder.binding.root.setOnClickListener { v -> if (v.tag is Int) onItemClick(v.tag as Int) }
+        return holder
+    }
 
     override fun getItemCount() = articles.count() * 3
 
     override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
-        holder.view.tag = position % articles.count()
-        holder.bind(articles[position % articles.count()])
+        holder.binding.root.tag = position % articles.count()
+        holder.binding.article = articles[position % articles.count()]
     }
 
-    class ArticleViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-        fun bind(article: Article) {
-            //todo: databinding
-            view.arch_article_title.text = article.title
-            view.arch_article_subtitle.text = article.article
-            Glide.with(view)
-                    .load(article.thumbnailUrl)
-                    .into(view.arch_article_thumbnail)
-        }
-    }
+    class ArticleViewHolder(val binding: ItemArticleDatabindingBinding) : RecyclerView.ViewHolder(binding.root)
 }
