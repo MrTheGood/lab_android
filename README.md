@@ -2,10 +2,12 @@
 This project is my main project for Android experiments. 
 
 These experiments can be:
-- Something cool I wanted to try out. For example some cool animation.
-- Features for new Android versions
-- App architectures like MVVM or MVP
-- Or anything else, really
+- Awesome animations
+- Cool UI components
+- New Android API features 
+- New AndroidX library stuff
+- App architectures like MVVM (including Architexcture Components and/or DataBinding)
+- Or whatever the hell I want to try out
 
 
 # Licence
