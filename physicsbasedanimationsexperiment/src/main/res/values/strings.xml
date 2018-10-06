@@ -20,4 +20,5 @@
     <string name="desc_animFlingView">Fling anywhere for animation</string>
     <string name="str_swipeUp">Swipe up to show an animated view</string>
     <string name="str_swipeDown">Swipe down to hide the animated view</string>
+    <string name="desc_animDynamicView">Press anywhere to move me to that position</string>
 </resources>

@@ -24,6 +24,7 @@
         <activity android:name=".SpringAnimActivity" />
         <activity android:name=".FlingAnimActivity" />
         <activity android:name=".CombinedFlingSpringAnimActivity" />
+        <activity android:name=".ChangingAnimActivity" />
     </application>
 
 </manifest>

@@ -21,6 +21,7 @@ import eu.insertcode.androidpexperiment.FingerprintDialogActivity
 import eu.insertcode.architectureexperiment.databinding.view.activity.ArchitectureComponentsDataBindingActivity
 import eu.insertcode.architectureexperiment.normal.view.activity.ArchitectureComponentsActivity
 import eu.insertcode.experiment.multiplethemes.NightModeThemeActivity
+import eu.insertcode.experiment.physicsbasedanimations.ChangingAnimActivity
 import eu.insertcode.experiment.physicsbasedanimations.CombinedFlingSpringAnimActivity
 import eu.insertcode.experiment.physicsbasedanimations.FlingAnimActivity
 import eu.insertcode.experiment.physicsbasedanimations.SpringAnimActivity
@@ -40,6 +41,7 @@ object Experiments {
             Experiment(R.drawable.ic_touch_app, "Spring Animation", "A circle that springs back to the original position", ExperimentState.COMPLETED, SpringAnimActivity::class.java),
             Experiment(R.drawable.ic_toll, "Fling Animation", "A circle which you can fling to any position", ExperimentState.COMPLETED, FlingAnimActivity::class.java),
             Experiment(R.drawable.ic_action_upload, "Combined Fling and Spring Animation", "A swipe up sheet with a spring bar inside it", ExperimentState.COMPLETED, CombinedFlingSpringAnimActivity::class.java),
+            Experiment(R.drawable.ic_touch_app, "Changing Animation", "Tap anywhere to animate an object to that location!", ExperimentState.DEVELOPMENT, ChangingAnimActivity::class.java),
 
             ExperimentCategory("Themes"),
             Experiment(R.drawable.ic_brightness_4, "Night mode", "An app with multiple day and night themes", ExperimentState.COMPLETED, NightModeThemeActivity::class.java),
