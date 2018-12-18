@@ -16,10 +16,10 @@
 
 package eu.insertcode.architectureexperiment.normal.view.adapter
 
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import eu.insertcode.architectureexperiment.R
 import eu.insertcode.architectureexperiment.data.Article

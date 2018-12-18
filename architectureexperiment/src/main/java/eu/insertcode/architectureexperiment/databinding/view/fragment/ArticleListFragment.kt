@@ -16,19 +16,19 @@
 
 package eu.insertcode.architectureexperiment.databinding.view.fragment
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.widget.DividerItemDecoration
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.DividerItemDecoration
 import eu.insertcode.architectureexperiment.R
 import eu.insertcode.architectureexperiment.databinding.view.activity.ArchitectureComponentsDataBindingActivity
 import eu.insertcode.architectureexperiment.databinding.view.adapter.ArticleAdapter
 import eu.insertcode.architectureexperiment.databinding.viewmodel.ArticleViewModel
-import kotlinx.android.synthetic.main.article_list_fragment.*
+import kotlinx.android.synthetic.main.article_list_fragment.view.*
 
 
 class ArticleListFragment : Fragment() {
@@ -42,14 +42,14 @@ class ArticleListFragment : Fragment() {
         viewModel = ViewModelProviders.of(requireActivity()).get(ArticleViewModel::class.java)
         viewModel.init()
 
-        viewRoot.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
-        viewRoot.adapter = ArticleAdapter { position ->
+        view!!.arch_article_list.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
+        view!!.arch_article_list.adapter = ArticleAdapter { position ->
             viewModel.select(position)
             (activity as ArchitectureComponentsDataBindingActivity).showFragment(ArticleFragment(), true)
         }
 
         viewModel.articles.observe(this, Observer { articles ->
-            (viewRoot.adapter as ArticleAdapter).articles = articles ?: emptyList()
+            (view!!.arch_article_list.adapter as ArticleAdapter).articles = articles ?: emptyList()
         })
     }
 

@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<!--
+  ~    Copyright 2018 Maarten de Goede
+  ~
+  ~    Licensed under the Apache License, Version 2.0 (the "License");
+  ~    you may not use this file except in compliance with the License.
+  ~    You may obtain a copy of the License at
+  ~
+  ~        http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~    Unless required by applicable law or agreed to in writing, software
+  ~    distributed under the License is distributed on an "AS IS" BASIS,
+  ~    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~    See the License for the specific language governing permissions and
+  ~    limitations under the License.
+  -->
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,7 +29,7 @@
         android:layout_height="match_parent"
         >
 
-        <android.support.design.card.MaterialCardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
@@ -30,33 +46,34 @@
                     style="@style/TextAppearance.AppCompat.Title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
                     android:layout_marginTop="8dp"
+                    android:layout_marginBottom="24dp"
                     android:text="Android P API 28"
                     />
 
-                <android.support.design.chip.ChipGroup
+                <com.google.android.material.chip.ChipGroup
                     android:id="@+id/chipgroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     >
 
-                    <android.support.design.chip.Chip
+                    <com.google.android.material.chip.Chip
                         android:id="@+id/chip1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:chipText="Test"
+                        android:text="Test"
                         />
 
 
-                    <android.support.design.chip.Chip
+                    <com.google.android.material.chip.Chip
                         android:id="@+id/chip2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:chipText="Example"
+                        android:text="Example"
+                        app:chipIcon="@drawable/ic_star"
                         />
 
-                </android.support.design.chip.ChipGroup>
+                </com.google.android.material.chip.ChipGroup>
 
                 <TextView
                     style="@style/TextAppearance.AppCompat.Body1"
@@ -65,7 +82,7 @@
                     android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan gravida mollis. Fusce quam lectus, auctor sit amet velit laoreet, laoreet consequat massa. Vivamus pulvinar dui sed faucibus commodo. Sed non orci est. Proin vehicula sollicitudin erat, eu congue libero viverra vel. Aliquam nec arcu dui. Pellentesque non aliquet ligula. Integer sapien mi, rutrum in mattis in, eleifend sed lorem. Curabitur vitae felis commodo, cursus mauris vitae, egestas ligula. Praesent enim nibh, porta efficitur egestas quis, ultrices id odio. Cras vehicula pulvinar erat, quis pretium lacus imperdiet nec. Proin tempor, diam eget vulputate venenatis, ante erat pulvinar libero, sit amet efficitur sem arcu sed dolor. Ut sodales cursus convallis. Nunc eget diam ornare, feugiat nisi in, fermentum nunc. Integer posuere magna ac risus interdum laoreet./n/nInteger ut venenatis mi. Ut interdum porta quam nec egestas. Nullam eget nisi ut enim gravida tempus. Morbi sed egestas risus. Quisque nulla neque, dapibus eu venenatis sit amet, vulputate in turpis. Curabitur hendrerit mauris vel diam scelerisque, fermentum dignissim est hendrerit. Integer id sollicitudin dolor, a porttitor mi. Phasellus ac nibh in neque semper condimentum. Aliquam dapibus leo eget suscipit suscipit. Integer porttitor libero sit amet semper euismod. Ut velit metus, sollicitudin vitae gravida sed, feugiat a purus./n/nAliquam orci ipsum, scelerisque nec ornare in, tempor at magna. Proin tempor ullamcorper orci, et luctus quam dictum sit amet. In tristique sapien quis nisi dictum posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed vitae dui rutrum, ultricies erat et, vehicula mauris. Nam est mauris, ornare non metus quis, rhoncus porttitor nisl. Sed imperdiet, massa eget euismod malesuada, tellus ligula commodo justo, vel aliquet sapien lectus in ex./n/nVestibulum sed est eu risus dapibus sollicitudin. Etiam in ultricies ligula, nec mollis sem. Etiam posuere velit non bibendum faucibus. Curabitur vestibulum varius venenatis. Pellentesque vehicula imperdiet massa, eget aliquam nulla. Cras molestie velit velit. Aenean molestie, nibh et tempor rutrum, augue eros lobortis libero, vel hendrerit mi nunc pretium purus. Nam eget diam euismod, ullamcorper dolor pharetra, faucibus leo. Ut ut ullamcorper mi./n/nMaecenas vitae diam vitae dolor faucibus sagittis id eu orci. Vivamus semper ultricies felis et eleifend. Vivamus et consectetur dui, eu euismod augue. Vestibulum quam ex, viverra et condimentum at, auctor eget tellus. Nam consequat eleifend leo a porta. Donec placerat porta hendrerit. Duis at felis condimentum, scelerisque augue ornare, efficitur nibh. Duis venenatis justo nec nisl dignissim egestas."
                     />
 
-                <android.support.design.button.MaterialButton
+                <com.google.android.material.button.MaterialButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="64dp"
@@ -78,22 +95,21 @@
                     />
 
             </LinearLayout>
-        </android.support.design.card.MaterialCardView>
+        </com.google.android.material.card.MaterialCardView>
     </ScrollView>
 
-    <android.support.design.bottomappbar.BottomAppBar
+    <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:layout_gravity="bottom"
         android:backgroundTint="#1565c0"
         app:fabAlignmentMode="end"
-        app:fabAttached="true"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         />
 
-    <android.support.design.widget.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_star"
@@ -101,4 +117,4 @@
         app:fabSize="auto"
         app:layout_anchor="@id/appbar"
         />
-</android.support.design.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

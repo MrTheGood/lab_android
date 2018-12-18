@@ -17,13 +17,13 @@
 package eu.insertcode.experiment.physicsbasedanimations
 
 import android.os.Bundle
-import android.support.animation.*
-import android.support.v4.view.GestureDetectorCompat
-import android.support.v7.app.AppCompatActivity
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewTreeObserver
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GestureDetectorCompat
+import androidx.dynamicanimation.animation.*
 import kotlinx.android.synthetic.main.activity_combined_fling_spring_anim.*
 
 class CombinedFlingSpringAnimActivity : AppCompatActivity() {

@@ -1,5 +1,5 @@
 /*
- *    Copyright 2018. Maarten de Goede
+ *    Copyright 2018 Maarten de Goede
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -16,10 +16,10 @@
 
 package eu.insertcode.experiments.util
 
-import android.databinding.BindingAdapter
-import android.support.annotation.DrawableRes
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.annotation.DrawableRes
+import androidx.databinding.BindingAdapter
 
 /**
  * Created by maarten on 2018-04-03.

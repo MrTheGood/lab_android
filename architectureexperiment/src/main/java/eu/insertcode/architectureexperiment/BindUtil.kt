@@ -16,8 +16,8 @@
 
 package eu.insertcode.architectureexperiment
 
-import android.databinding.BindingAdapter
 import android.widget.ImageView
+import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 
 /**

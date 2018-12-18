@@ -17,12 +17,12 @@
 package eu.insertcode.experiment.physicsbasedanimations
 
 import android.os.Bundle
-import android.support.animation.FloatPropertyCompat
-import android.support.animation.SpringAnimation
-import android.support.animation.SpringForce
-import android.support.v7.app.AppCompatActivity
 import android.view.MotionEvent
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.dynamicanimation.animation.FloatPropertyCompat
+import androidx.dynamicanimation.animation.SpringAnimation
+import androidx.dynamicanimation.animation.SpringForce
 import kotlinx.android.synthetic.main.activity_dynamic_animation.*
 
 class ChangingAnimActivity : AppCompatActivity() {

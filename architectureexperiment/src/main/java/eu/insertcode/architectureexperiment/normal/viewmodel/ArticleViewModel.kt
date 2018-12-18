@@ -16,8 +16,8 @@
 
 package eu.insertcode.architectureexperiment.normal.viewmodel
 
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import eu.insertcode.architectureexperiment.MockData
 import eu.insertcode.architectureexperiment.data.Article
 

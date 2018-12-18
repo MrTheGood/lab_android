@@ -17,8 +17,8 @@
 package eu.insertcode.architectureexperiment.normal.view.activity
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import eu.insertcode.architectureexperiment.R
 import eu.insertcode.architectureexperiment.normal.view.fragment.ArticleFragment
 import eu.insertcode.architectureexperiment.normal.view.fragment.ArticleListFragment

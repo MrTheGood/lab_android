@@ -1,5 +1,5 @@
 /*
- *    Copyright 2018. Maarten de Goede
+ *    Copyright 2018 Maarten de Goede
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -19,10 +19,10 @@ package eu.insertcode.experiments.viewmodel
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
-import android.support.annotation.DrawableRes
-import android.support.v4.content.ContextCompat
 import android.view.View
 import android.widget.Toast
+import androidx.annotation.DrawableRes
+import androidx.core.content.ContextCompat
 import eu.insertcode.experiments.R
 import eu.insertcode.experiments.model.Experiment
 import eu.insertcode.experiments.model.ExperimentState

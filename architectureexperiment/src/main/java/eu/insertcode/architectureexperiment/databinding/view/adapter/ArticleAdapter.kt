@@ -16,10 +16,10 @@
 
 package eu.insertcode.architectureexperiment.databinding.view.adapter
 
-import android.databinding.DataBindingUtil
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.RecyclerView
 import eu.insertcode.architectureexperiment.R
 import eu.insertcode.architectureexperiment.data.Article
 import eu.insertcode.architectureexperiment.databinding.ItemArticleDatabindingBinding

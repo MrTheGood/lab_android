@@ -1,5 +1,5 @@
 /*
- *    Copyright 2018. Maarten de Goede
+ *    Copyright 2018 Maarten de Goede
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 package eu.insertcode.experiments.view
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import eu.insertcode.experiments.R
 import kotlinx.android.synthetic.main.activity_main.*
 

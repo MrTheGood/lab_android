@@ -16,34 +16,35 @@
 
 package eu.insertcode.architectureexperiment.normal.view.fragment
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.widget.DividerItemDecoration
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.DividerItemDecoration
 import eu.insertcode.architectureexperiment.R
 import eu.insertcode.architectureexperiment.normal.view.activity.ArchitectureComponentsActivity
 import eu.insertcode.architectureexperiment.normal.view.adapter.ArticleAdapter
 import eu.insertcode.architectureexperiment.normal.viewmodel.ArticleViewModel
-import kotlinx.android.synthetic.main.article_list_fragment.*
+import kotlinx.android.synthetic.main.article_list_fragment.view.*
 
 
 class ArticleListFragment : Fragment() {
     private lateinit var viewModel: ArticleViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?) =
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
             inflater.inflate(R.layout.article_list_fragment, container, false)
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(requireActivity()).get(ArticleViewModel::class.java)
+        viewModel = ViewModelProviders.of(requireActivity())[ArticleViewModel::class.java]
         viewModel.init()
 
         viewModel.articles.observe(this, Observer { articles ->
-            viewRoot.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
-            viewRoot.adapter = ArticleAdapter({ position ->
+            view!!.arch_article_list.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
+            view!!.arch_article_list.adapter = ArticleAdapter({ position ->
                 viewModel.select(position)
                 (activity as ArchitectureComponentsActivity).showFragment(ArticleFragment(), true)
             }, articles ?: emptyList())

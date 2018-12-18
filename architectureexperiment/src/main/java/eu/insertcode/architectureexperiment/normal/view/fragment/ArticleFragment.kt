@@ -16,18 +16,18 @@
 
 package eu.insertcode.architectureexperiment.normal.view.fragment
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
 import eu.insertcode.architectureexperiment.R
 import eu.insertcode.architectureexperiment.data.Article
 import eu.insertcode.architectureexperiment.normal.viewmodel.ArticleViewModel
-import kotlinx.android.synthetic.main.fragment_article.*
+import kotlinx.android.synthetic.main.fragment_article.view.*
 
 class ArticleFragment : Fragment() {
     private lateinit var viewModel: ArticleViewModel
@@ -35,11 +35,13 @@ class ArticleFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        viewModel = ViewModelProviders.of(requireActivity()).get(ArticleViewModel::class.java)
-        viewModel.selectedArticle?.observe(this, Observer<Article> { article ->
-            Glide.with(arch_article_thumbnail).load(article?.thumbnailUrl).into(arch_article_thumbnail)
-            arch_article_title.text = article?.title
-            arch_article_text.text = article?.article
+        viewModel = ViewModelProviders.of(requireActivity())[ArticleViewModel::class.java]
+        viewModel.selectedArticle.observe(this, Observer<Article> { article ->
+            view!!.apply {
+                Glide.with(arch_article_thumbnail).load(article?.thumbnailUrl).into(arch_article_thumbnail)
+                arch_article_title.text = article?.title
+                arch_article_text.text = article?.article
+            }
         })
     }
 
