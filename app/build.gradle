@@ -1,5 +1,5 @@
 /*
- *    Copyright 2018 Maarten de Goede
+ *    Copyright 2019 Maarten de Goede
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -47,4 +47,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$androidx_appcompat_version"
     implementation "androidx.recyclerview:recyclerview:$androidx_recyclerview_version"
     implementation "androidx.constraintlayout:constraintlayout:$androidx_constraintlayout_version"
+
+    // Google
+    implementation "com.google.android.material:material:$material_version"
 }

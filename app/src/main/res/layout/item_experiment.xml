@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~    Copyright 2018 Maarten de Goede
+  ~    Copyright 2019 Maarten de Goede
   ~
   ~    Licensed under the Apache License, Version 2.0 (the "License");
   ~    you may not use this file except in compliance with the License.
@@ -33,7 +33,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#fff"
-        android:elevation="4dp"
         android:foreground="?selectableItemBackground"
         android:onClick="@{experimentViewModel.onClickedItem}"
         android:orientation="horizontal"
@@ -48,14 +47,15 @@
             srcRes="@{experimentViewModel.experimentIcon}"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@drawable/experiment_indicator_background"
             android:layout_margin="8dp"
+            android:background="@drawable/experiment_indicator_background"
             android:backgroundTint="@{experimentViewModel.experimentIconBackgroundColor}"
             android:contentDescription="@string/desc_experimentIndicator"
             android:padding="9dp"
             android:scaleType="centerInside"
             android:tint="#fff"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:src="@drawable/ic_action_android"
             />
 

@@ -1,5 +1,5 @@
 /*
- *    Copyright 2018 Maarten de Goede
+ *    Copyright 2019 Maarten de Goede
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -40,7 +40,7 @@ object Experiments {
             ExperimentCategory("Physics Based Animations"),
             Experiment(R.drawable.ic_touch_app, "Spring Animation", "A circle that springs back to the original position", ExperimentState.COMPLETED, SpringAnimActivity::class.java),
             Experiment(R.drawable.ic_toll, "Fling Animation", "A circle which you can fling to any position", ExperimentState.COMPLETED, FlingAnimActivity::class.java),
-            Experiment(R.drawable.ic_action_upload, "Combined Fling and Spring Animation", "A swipe up sheet with a spring bar inside it", ExperimentState.COMPLETED, CombinedFlingSpringAnimActivity::class.java),
+            Experiment(R.drawable.ic_vertical_align_center, "Combined Fling and Spring Animation", "A swipe up sheet with a spring bar inside it", ExperimentState.COMPLETED, CombinedFlingSpringAnimActivity::class.java),
             Experiment(R.drawable.ic_touch_app, "Changing Animation", "Tap anywhere to animate an object to that location!", ExperimentState.DEVELOPMENT, ChangingAnimActivity::class.java),
 
             ExperimentCategory("Themes"),
