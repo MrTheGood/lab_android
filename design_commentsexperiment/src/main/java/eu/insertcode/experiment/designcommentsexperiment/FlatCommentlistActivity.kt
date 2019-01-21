@@ -14,10 +14,16 @@
  *    limitations under the License.
  */
 
-include ':app',
-        ':design_commentsexperiment',
-        ':physicsbasedanimationsexperiment',
-        ':multiplethemesexperiment',
-        ':androidpexperiment',
-        ':architectureexperiment',
-        ':otherexperiments'
+package eu.insertcode.experiment.designcommentsexperiment
+
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import eu.insertcode.multiplethemes.R
+
+class FlatCommentlistActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_flat_commentlist)
+    }
+}

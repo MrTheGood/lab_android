@@ -20,6 +20,7 @@ import eu.insertcode.androidpexperiment.DesignLibraryV28Activity
 import eu.insertcode.androidpexperiment.FingerprintDialogActivity
 import eu.insertcode.architectureexperiment.databinding.view.activity.ArchitectureComponentsDataBindingActivity
 import eu.insertcode.architectureexperiment.normal.view.activity.ArchitectureComponentsActivity
+import eu.insertcode.experiment.designcommentsexperiment.FlatCommentlistActivity
 import eu.insertcode.experiment.multiplethemes.NightModeThemeActivity
 import eu.insertcode.experiment.physicsbasedanimations.ChangingAnimActivity
 import eu.insertcode.experiment.physicsbasedanimations.CombinedFlingSpringAnimActivity
@@ -37,6 +38,9 @@ import eu.insertcode.otherexperiments.SideSheetDrawerActivity
 object Experiments {
     @JvmStatic
     val experiments = listOf(
+            ExperimentCategory("Comments"),
+            Experiment(R.drawable.ic_vertical_align_center, "Flat Comment List", "A list of comments that's pretty conventional", ExperimentState.DEVELOPMENT, FlatCommentlistActivity::class.java),
+
             ExperimentCategory("Physics Based Animations"),
             Experiment(R.drawable.ic_touch_app, "Spring Animation", "A circle that springs back to the original position", ExperimentState.COMPLETED, SpringAnimActivity::class.java),
             Experiment(R.drawable.ic_toll, "Fling Animation", "A circle which you can fling to any position", ExperimentState.COMPLETED, FlingAnimActivity::class.java),
