@@ -41,7 +41,7 @@ object Experiments {
             Experiment(R.drawable.ic_touch_app, "Spring Animation", "A circle that springs back to the original position", ExperimentState.COMPLETED, SpringAnimActivity::class.java),
             Experiment(R.drawable.ic_toll, "Fling Animation", "A circle which you can fling to any position", ExperimentState.COMPLETED, FlingAnimActivity::class.java),
             Experiment(R.drawable.ic_vertical_align_center, "Combined Fling and Spring Animation", "A swipe up sheet with a spring bar inside it", ExperimentState.COMPLETED, CombinedFlingSpringAnimActivity::class.java),
-            Experiment(R.drawable.ic_touch_app, "Changing Animation", "Tap anywhere to animate an object to that location!", ExperimentState.DEVELOPMENT, ChangingAnimActivity::class.java),
+            Experiment(R.drawable.ic_touch_app, "Changing Animation", "Tap anywhere to animate an object to that location!", ExperimentState.FAILED, ChangingAnimActivity::class.java),
 
             ExperimentCategory("Themes"),
             Experiment(R.drawable.ic_brightness_4, "Night mode", "An app with multiple day and night themes", ExperimentState.COMPLETED, NightModeThemeActivity::class.java),
@@ -51,10 +51,10 @@ object Experiments {
             Experiment(R.drawable.ic_fingerprint, "Biometric Prompt", "Testing the new Android P fingerprint dialog", ExperimentState.COMPLETED, FingerprintDialogActivity::class.java),
 
             ExperimentCategory("App Architecture"),
-            Experiment(R.drawable.ic_build, "Architecture Components", "A simple app to test out Android Architecture Components", ExperimentState.DEVELOPMENT, ArchitectureComponentsActivity::class.java),
-            Experiment(R.drawable.ic_link, "Architecture Components Databinding", "A simple app to test out Android Architecture Components with databinding", ExperimentState.DEVELOPMENT, ArchitectureComponentsDataBindingActivity::class.java),
+            Experiment(R.drawable.ic_build, "Architecture Components", "A simple app to test out Android Architecture Components", ExperimentState.COMPLETED, ArchitectureComponentsActivity::class.java),
+            Experiment(R.drawable.ic_link, "Architecture Components Databinding", "A simple app to test out Android Architecture Components with databinding", ExperimentState.COMPLETED, ArchitectureComponentsDataBindingActivity::class.java),
 
             ExperimentCategory("Other Experiments"),
-            Experiment(R.drawable.ic_swap_horiz, "Side Sheet Experiment", "A work in progress navigation component", ExperimentState.DEVELOPMENT, SideSheetDrawerActivity::class.java)
+            Experiment(R.drawable.ic_swap_horiz, "Side Sheet Experiment", "This experiment has been cancelled for now. ", ExperimentState.FAILED, SideSheetDrawerActivity::class.java)
     )
 }
