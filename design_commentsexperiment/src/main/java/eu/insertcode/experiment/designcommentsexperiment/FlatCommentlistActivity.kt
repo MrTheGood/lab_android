@@ -18,12 +18,18 @@ package eu.insertcode.experiment.designcommentsexperiment
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import eu.insertcode.experiment.designcommentsexperiment.data.DemoContent
 import eu.insertcode.multiplethemes.R
+import kotlinx.android.synthetic.main.activity_flat_commentlist.*
 
 class FlatCommentlistActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_flat_commentlist)
+
+        design_comments.adapter = CommentsAdapter().apply {
+            submitList(DemoContent.comments)
+        }
     }
 }
