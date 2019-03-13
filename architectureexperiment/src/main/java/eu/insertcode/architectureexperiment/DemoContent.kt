@@ -1,5 +1,5 @@
 /*
- *    Copyright 2018 Maarten de Goede
+ *    Copyright 2019 Maarten de Goede
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -16,13 +16,11 @@
 
 package eu.insertcode.architectureexperiment
 
-import eu.insertcode.architectureexperiment.data.Article
-
 /**
  * Created by maartendegoede on 18/06/2018.
  * Copyright © 2018 insertCode.eu. All rights reserved.
  */
-object MockData {
+object DemoContent {
     val articles = listOf(
             Article(0, "https://payload110.cargocollective.com/1/6/209189/4517674/LOREM-IPSUM3.jpg", "Lorem", "Lorem ipsum dolor sit amet"),
             Article(

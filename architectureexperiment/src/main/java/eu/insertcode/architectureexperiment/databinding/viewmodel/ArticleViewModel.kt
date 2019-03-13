@@ -1,5 +1,5 @@
 /*
- *    Copyright 2018 Maarten de Goede
+ *    Copyright 2019 Maarten de Goede
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -16,10 +16,7 @@
 
 package eu.insertcode.architectureexperiment.databinding.viewmodel
 
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import eu.insertcode.architectureexperiment.MockData
-import eu.insertcode.architectureexperiment.data.Article
+import eu.insertcode.architectureexperiment.DemoContent
 
 class ArticleViewModel : ViewModel() {
     val articles = MutableLiveData<List<Article>>()
@@ -27,11 +24,11 @@ class ArticleViewModel : ViewModel() {
 
 
     fun init() {
-        articles.value = MockData.articles
+        articles.value = DemoContent.articles
         //todo: load from cache
     }
 
     fun select(position: Int) {
-        selectedArticle.value = articles.value?.getOrNull(position)
+        selectedArticle.value = articles.value.getOrNull(position)
     }
 }
