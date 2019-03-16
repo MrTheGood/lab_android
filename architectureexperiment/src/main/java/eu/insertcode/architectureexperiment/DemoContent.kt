@@ -16,6 +16,8 @@
 
 package eu.insertcode.architectureexperiment
 
+import eu.insertcode.architectureexperiment.data.Article
+
 /**
  * Created by maartendegoede on 18/06/2018.
  * Copyright © 2018 insertCode.eu. All rights reserved.

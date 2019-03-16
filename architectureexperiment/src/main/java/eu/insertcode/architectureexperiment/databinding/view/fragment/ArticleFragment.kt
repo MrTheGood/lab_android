@@ -20,19 +20,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
-import eu.insertcode.architectureexperiment.R
 import eu.insertcode.architectureexperiment.databinding.FragmentArticleDatabindingBinding
 import eu.insertcode.architectureexperiment.databinding.viewmodel.ArticleViewModel
 
 class ArticleFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        val binding: FragmentArticleDatabindingBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_article_databinding, container, false)
-        binding.setLifecycleOwner(this)
-        binding.articleViewModel = ViewModelProviders.of(requireActivity()).get(ArticleViewModel::class.java)
+        val binding = FragmentArticleDatabindingBinding.inflate(inflater, container, false)
+        binding.lifecycleOwner = this
+        binding.articleViewModel = ViewModelProviders.of(requireActivity())[ArticleViewModel::class.java]
         return binding.root
     }
 

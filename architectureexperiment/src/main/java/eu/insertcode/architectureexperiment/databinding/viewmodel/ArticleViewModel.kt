@@ -16,7 +16,10 @@
 
 package eu.insertcode.architectureexperiment.databinding.viewmodel
 
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import eu.insertcode.architectureexperiment.DemoContent
+import eu.insertcode.architectureexperiment.data.Article
 
 class ArticleViewModel : ViewModel() {
     val articles = MutableLiveData<List<Article>>()
@@ -29,6 +32,6 @@ class ArticleViewModel : ViewModel() {
     }
 
     fun select(position: Int) {
-        selectedArticle.value = articles.value.getOrNull(position)
+        selectedArticle.value = articles.value?.getOrNull(position)
     }
 }
