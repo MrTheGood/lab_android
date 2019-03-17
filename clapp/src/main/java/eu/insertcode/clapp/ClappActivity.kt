@@ -16,8 +16,10 @@
 
 package eu.insertcode.clapp
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_clapp.*
 
 /**
  * Created by maartendegoede on 2019-03-17.
@@ -25,8 +27,32 @@ import androidx.appcompat.app.AppCompatActivity
  */
 class ClappActivity : AppCompatActivity() {
 
+    private val clapSounds by lazy {
+        listOf(
+                MediaPlayer.create(this, R.raw.clap1), MediaPlayer.create(this, R.raw.clap2),
+                MediaPlayer.create(this, R.raw.clap3), MediaPlayer.create(this, R.raw.clap4),
+                MediaPlayer.create(this, R.raw.clap5), MediaPlayer.create(this, R.raw.clap6),
+                MediaPlayer.create(this, R.raw.clap7), MediaPlayer.create(this, R.raw.clap8),
+                MediaPlayer.create(this, R.raw.clap9), MediaPlayer.create(this, R.raw.clap10),
+                MediaPlayer.create(this, R.raw.clap11), MediaPlayer.create(this, R.raw.clap12),
+                MediaPlayer.create(this, R.raw.clap13), MediaPlayer.create(this, R.raw.clap14),
+                MediaPlayer.create(this, R.raw.clap15), MediaPlayer.create(this, R.raw.clap16),
+                MediaPlayer.create(this, R.raw.clap17), MediaPlayer.create(this, R.raw.clap18),
+                MediaPlayer.create(this, R.raw.clap19)
+        )
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_clapp)
+
+        button_clap.setOnClickListener {
+            clapSounds.random().start()
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        clapSounds.forEach { it.release() }
     }
 }
