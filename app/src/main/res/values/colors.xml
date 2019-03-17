@@ -17,9 +17,9 @@
 
 <resources>
     <!-- Main Colours -->
-    <color name="colorPrimary">#2962ff</color>
-    <color name="colorPrimaryVariant">#0039cb</color>
-    <color name="colorPrimaryVariantLight">#768fff</color>
+    <color name="colorPrimary">#4596ec</color>
+    <color name="colorPrimaryVariant">#3577cb</color>
+    <color name="colorPrimaryVariantLight">#75fbfd</color>
     <color name="colorOnPrimary">#fff</color>
 
     <color name="colorSecondary">@color/colorPrimary</color>
