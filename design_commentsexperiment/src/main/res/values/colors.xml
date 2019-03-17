@@ -15,9 +15,14 @@
   ~    limitations under the License.
   -->
 
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<resources>
+    <!-- Main Colours -->
+    <color name="colorPrimary">#2962ff</color>
+    <color name="colorPrimaryVariant">#0039cb</color>
+    <color name="colorPrimaryVariantLight">#768fff</color>
+    <color name="colorOnPrimary">#fff</color>
 
-    <corners android:radius="6dp" />
-    <solid android:color="#99dedede" />
-
-</shape>
+    <color name="colorSecondary">@color/colorPrimary</color>
+    <color name="colorSecondaryVariant">@color/colorPrimary</color>
+    <color name="colorOnSecondary">@color/colorOnPrimary</color>
+</resources>

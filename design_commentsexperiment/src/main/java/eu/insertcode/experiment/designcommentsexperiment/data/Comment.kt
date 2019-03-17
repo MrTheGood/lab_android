@@ -16,6 +16,8 @@
 
 package eu.insertcode.experiment.designcommentsexperiment.data
 
+import androidx.annotation.DrawableRes
+
 /**
  * Created by maartendegoede on 2019-01-29.
  * Copyright © 2019 insertCode.eu. All rights reserved.
@@ -23,5 +25,7 @@ package eu.insertcode.experiment.designcommentsexperiment.data
 data class Comment(
         val id: Int,
         val name: String,
-        val text: String
+        val text: String,
+        val date: String,
+        @DrawableRes val image: Int
 )
