@@ -40,7 +40,7 @@ object Experiments {
     @JvmStatic
     val experiments = listOf(
             ExperimentCategory("Shitty Apps"),
-            Experiment(R.drawable.ic_pan_tool, "Clapp", "The revolutionary app for clapping with just one hand!", ExperimentState.DEVELOPMENT, ClappActivity::class.java),
+            Experiment(R.drawable.ic_clap, "Clapp", "The revolutionary app for clapping with just one hand!", ExperimentState.DEVELOPMENT, ClappActivity::class.java),
 
             ExperimentCategory("Comments"),
             Experiment(R.drawable.ic_vertical_align_center, "Flat Comment List", "A list of comments that's pretty conventional", ExperimentState.DEVELOPMENT, FlatCommentlistActivity::class.java),
