@@ -27,12 +27,12 @@
         style="@style/TextAppearance.MaterialComponents.Body1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
         android:gravity="center"
         android:padding="16dp"
         android:text="Has this ever happened to you:\n\n
 You are at a concert, and people are clapping. However, you have a drink in your hand so you only have one hand free, and you can't clap properly.\n\n
 No more! With Clapp, you can clap with only one hand! All you have to do is grab your phone, unlock it, open Clapp, turn up the volume and press a button! Clapping has never been this easy!"
-        app:layout_constraintBottom_toTopOf="@id/button_clap"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -40,13 +40,13 @@ No more! With Clapp, you can clap with only one hand! All you have to do is grab
 
     <ImageView
         android:id="@+id/button_clap"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginBottom="128dp"
         android:src="@drawable/ic_clap"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
