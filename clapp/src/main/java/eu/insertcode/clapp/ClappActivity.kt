@@ -18,6 +18,7 @@ package eu.insertcode.clapp
 
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.view.animation.AccelerateDecelerateInterpolator
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_clapp.*
 
@@ -46,8 +47,26 @@ class ClappActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_clapp)
 
-        button_clap.setOnClickListener {
+        val scaleX = button_clap.scaleX
+        val scaleY = button_clap.scaleY
+        val interpolator = AccelerateDecelerateInterpolator()
+
+        button_clap.setOnClickListener { v ->
             clapSounds.random().start()
+            v.animate()
+                    .scaleX(scaleX * .85f)
+                    .scaleY(scaleY * .85f)
+                    .setDuration(50)
+                    .setInterpolator(interpolator)
+                    .withEndAction {
+                        v.animate()
+                                .scaleX(scaleX)
+                                .scaleY(scaleY)
+                                .setDuration(50)
+                                .setInterpolator(interpolator)
+                                .start()
+                    }
+                    .start()
         }
     }
 
