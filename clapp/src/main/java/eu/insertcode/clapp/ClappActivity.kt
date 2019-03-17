@@ -14,11 +14,19 @@
  *    limitations under the License.
  */
 
-include ':app',
-        ':clapp',
-        ':design_commentsexperiment',
-        ':physicsbasedanimationsexperiment',
-        ':multiplethemesexperiment',
-        ':androidpexperiment',
-        ':architectureexperiment',
-        ':otherexperiments'
+package eu.insertcode.clapp
+
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+
+/**
+ * Created by maartendegoede on 2019-03-17.
+ * Copyright © 2019 insertCode.eu. All rights reserved.
+ */
+class ClappActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_clapp)
+    }
+}

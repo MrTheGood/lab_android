@@ -14,33 +14,28 @@
  *    limitations under the License.
  */
 
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 28
+
+
     defaultConfig {
-        applicationId "eu.insertcode.experiments"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
-        versionName "0.1"
+        versionName "1.0"
     }
+
     dataBinding {
         enabled = true
     }
 }
 
 dependencies {
-    implementation project(':physicsbasedanimationsexperiment')
-    implementation project(':design_commentsexperiment')
-    implementation project(':multiplethemesexperiment')
-    implementation project(':androidpexperiment')
-    implementation project(':architectureexperiment')
-    implementation project(':otherexperiments')
-    implementation project(':clapp')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     kapt "androidx.databinding:databinding-compiler:$gradle_version"
@@ -49,7 +44,5 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$androidx_appcompat_version"
     implementation "androidx.recyclerview:recyclerview:$androidx_recyclerview_version"
     implementation "androidx.constraintlayout:constraintlayout:$androidx_constraintlayout_version"
-
-    // Google
     implementation "com.google.android.material:material:$material_version"
 }

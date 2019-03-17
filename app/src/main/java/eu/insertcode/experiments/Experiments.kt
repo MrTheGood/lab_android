@@ -20,6 +20,7 @@ import eu.insertcode.androidpexperiment.DesignLibraryV28Activity
 import eu.insertcode.androidpexperiment.FingerprintDialogActivity
 import eu.insertcode.architectureexperiment.databinding.view.activity.ArchitectureComponentsDataBindingActivity
 import eu.insertcode.architectureexperiment.normal.view.activity.ArchitectureComponentsActivity
+import eu.insertcode.clapp.ClappActivity
 import eu.insertcode.experiment.designcommentsexperiment.FlatCommentlistActivity
 import eu.insertcode.experiment.multiplethemes.NightModeThemeActivity
 import eu.insertcode.experiment.physicsbasedanimations.ChangingAnimActivity
@@ -38,6 +39,9 @@ import eu.insertcode.otherexperiments.SideSheetDrawerActivity
 object Experiments {
     @JvmStatic
     val experiments = listOf(
+            ExperimentCategory("Shitty Apps"),
+            Experiment(R.drawable.ic_pan_tool, "Clapp", "The revolutionary app for clapping with just one hand!", ExperimentState.DEVELOPMENT, ClappActivity::class.java),
+
             ExperimentCategory("Comments"),
             Experiment(R.drawable.ic_vertical_align_center, "Flat Comment List", "A list of comments that's pretty conventional", ExperimentState.DEVELOPMENT, FlatCommentlistActivity::class.java),
 
