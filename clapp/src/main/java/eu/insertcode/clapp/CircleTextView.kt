@@ -37,20 +37,8 @@ class CircleTextView(
     // https://blog.upcurve.co/how-to-create-a-gradient-textview-in-android-c21331da86ab
     // https://hemantvc.blogspot.com/2016/10/text-curve-clockwise-and-anticlockwise_95.html
 
-    private val paint by lazy {
-        Paint(Paint.ANTI_ALIAS_FLAG).apply {
-            style = Paint.Style.FILL
-            textSize = 50f
-            textAlign = textAlign
-            typeface = typeface
-            shader = LinearGradient(0f, height / 2f, width.toFloat(), height / 2f,
-                    ContextCompat.getColor(context, R.color.color1),
-                    ContextCompat.getColor(context, R.color.color2),
-                    Shader.TileMode.CLAMP)
-        }
-    }
+    private val textsize: Float
     private val textPath by lazy { Path() }
-
     var text: String = ""
         set(value) {
             field = value.replace("\n", " ")
@@ -61,12 +49,31 @@ class CircleTextView(
             postInvalidate()
         }
 
+    init {
+        val a = context.obtainStyledAttributes(attrs, R.styleable.CircleTextView)
+
+        textsize = a.getDimensionPixelSize(R.styleable.CircleTextView_text_size, 0).toFloat()
+        text = a.getString(R.styleable.CircleTextView_text) ?: "fuck"
+
+        a.recycle()
+    }
+
+    private val paint by lazy {
+        Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            style = Paint.Style.FILL
+            textSize = if (textsize == 0f) 50f else textsize
+            shader = LinearGradient(0f, height / 2f, width.toFloat(), height / 2f,
+                    ContextCompat.getColor(context, R.color.color1),
+                    ContextCompat.getColor(context, R.color.color2),
+                    Shader.TileMode.CLAMP)
+        }
+    }
+
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
-    constructor(context: Context) : this(context, null, 0)
+
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-
         val circumference = (paint.measureText(text) + paint.strokeWidth * 2f) * 360f / Math.abs(textRadius)
         val diameter = circumference / Math.PI.toFloat()
 
@@ -88,6 +95,7 @@ class CircleTextView(
 
         val rectf = RectF(left, top, right, bottom)
         textPath.addArc(rectf, startAngle.toFloat(), textRadius.toFloat())
+        canvas.drawPath(textPath, paint)
         canvas.drawTextOnPath(text, textPath, paint.strokeWidth, 0.0f, paint)
     }
 }
