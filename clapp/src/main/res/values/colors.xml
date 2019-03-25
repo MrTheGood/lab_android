@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~    Copyright 2019 Maarten de Goede
   ~
@@ -14,12 +15,7 @@
   ~    limitations under the License.
   -->
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="eu.insertcode.clapp"
-    >
-
-    <application>
-        <activity android:name=".ClappActivity" />
-        <activity android:name=".CurvedTextActivity" />
-    </application>
-</manifest>
+<resources>
+    <color name="color1">#0064FF</color>
+    <color name="color2">#00FF56</color>
+</resources>
