@@ -52,6 +52,7 @@ class ClappActivity : AppCompatActivity() {
         val interpolator = AccelerateDecelerateInterpolator()
 
         button_clap.setOnClickListener { v ->
+            clapp_text.textRadius = 90
             clapSounds.random().start()
             v.animate()
                     .scaleX(scaleX * .85f)
