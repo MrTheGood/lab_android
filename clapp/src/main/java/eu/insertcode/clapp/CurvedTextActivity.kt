@@ -36,6 +36,5 @@ class CurvedTextActivity : AppCompatActivity() {
         })
 
         circulartext.textRadius = 0
-        circulartext.text = "Tap Or Hold To Clap"
     }
 }

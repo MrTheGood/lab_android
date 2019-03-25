@@ -57,7 +57,7 @@ class CircleTextView(
         endColor = a.getColor(R.styleable.CircleTextView_endColor, 0x000000)
 
         textsize = a.getDimensionPixelSize(R.styleable.CircleTextView_textSize, 0).toFloat()
-        text = a.getString(R.styleable.CircleTextView_text) ?: "fuck"
+        text = a.getString(R.styleable.CircleTextView_text) ?: ""
 
         a.recycle()
     }
@@ -97,7 +97,6 @@ class CircleTextView(
 
         val rectf = RectF(left, top, right, bottom)
         textPath.addArc(rectf, startAngle.toFloat(), textRadius.toFloat())
-        canvas.drawPath(textPath, paint)
         canvas.drawTextOnPath(text, textPath, paint.strokeWidth, 0.0f, paint)
     }
 }
