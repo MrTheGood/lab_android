@@ -20,7 +20,6 @@ import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
-import androidx.core.content.ContextCompat
 
 
 /**
@@ -38,6 +37,8 @@ class CircleTextView(
     // https://hemantvc.blogspot.com/2016/10/text-curve-clockwise-and-anticlockwise_95.html
 
     private val textsize: Float
+    private val startColor: Int
+    private val endColor: Int
     private val textPath by lazy { Path() }
     var text: String = ""
         set(value) {
@@ -52,7 +53,10 @@ class CircleTextView(
     init {
         val a = context.obtainStyledAttributes(attrs, R.styleable.CircleTextView)
 
-        textsize = a.getDimensionPixelSize(R.styleable.CircleTextView_text_size, 0).toFloat()
+        startColor = a.getColor(R.styleable.CircleTextView_startColor, 0x000000)
+        endColor = a.getColor(R.styleable.CircleTextView_endColor, 0x000000)
+
+        textsize = a.getDimensionPixelSize(R.styleable.CircleTextView_textSize, 0).toFloat()
         text = a.getString(R.styleable.CircleTextView_text) ?: "fuck"
 
         a.recycle()
@@ -63,9 +67,7 @@ class CircleTextView(
             style = Paint.Style.FILL
             textSize = if (textsize == 0f) 50f else textsize
             shader = LinearGradient(0f, height / 2f, width.toFloat(), height / 2f,
-                    ContextCompat.getColor(context, R.color.color1),
-                    ContextCompat.getColor(context, R.color.color2),
-                    Shader.TileMode.CLAMP)
+                    startColor, endColor, Shader.TileMode.CLAMP)
         }
     }
 
