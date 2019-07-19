@@ -27,8 +27,11 @@ import androidx.databinding.BindingAdapter
  */
 @BindingAdapter("srcRes")
 fun setImageSrc(imageView: ImageView, @DrawableRes res: Int?) {
-    if (res == null) return
-    imageView.setImageDrawable(imageView.context.resources.getDrawable(res, null))
+    if (res == null) {
+        imageView.setImageDrawable(null)
+        return
+    }
+    imageView.setImageDrawable(imageView.resources.getDrawable(res, null))
 }
 
 

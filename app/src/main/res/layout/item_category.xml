@@ -29,7 +29,7 @@
     </data>
 
     <TextView
-        android:id="@+id/category_title"
+        android:id="@+id/root"
         style="@style/TextAppearance.AppCompat.Subhead"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
