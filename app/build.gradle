@@ -28,6 +28,12 @@ android {
         versionCode 1
         versionName "0.1"
     }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
     dataBinding {
         enabled = true
     }
@@ -41,14 +47,18 @@ dependencies {
     implementation project(':architectureexperiment')
     implementation project(':otherexperiments')
     implementation project(':clapp')
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     kapt "androidx.databinding:databinding-compiler:$gradle_version"
 
     //androidX
+    implementation "androidx.core:core-ktx:$androidx_corektx_version"
     implementation "androidx.appcompat:appcompat:$androidx_appcompat_version"
     implementation "androidx.recyclerview:recyclerview:$androidx_recyclerview_version"
     implementation "androidx.constraintlayout:constraintlayout:$androidx_constraintlayout_version"
+
+    // Architecture Components
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
 
     // Google
     implementation "com.google.android.material:material:$material_version"
