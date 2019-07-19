@@ -41,11 +41,11 @@ object Experiments {
     @JvmStatic
     val experiments = listOf(
             ExperimentCategory("Shitty Apps"),
-            Experiment(R.drawable.ic_clap, "Clapp", "The revolutionary app for clapping with just one hand!", ExperimentState.DEVELOPMENT, ClappActivity::class.java),
+            Experiment(R.drawable.ic_clap, "Clapp", "The revolutionary app for clapping with just one hand!", ExperimentState.COMPLETED, ClappActivity::class.java),
             Experiment(R.drawable.ic_looks, "CircularText", "Circular Text, required for Clapp.", ExperimentState.COMPLETED, CurvedTextActivity::class.java),
 
             ExperimentCategory("Comments"),
-            Experiment(R.drawable.ic_vertical_align_center, "Flat Comment List", "A list of comments that's pretty conventional", ExperimentState.DEVELOPMENT, FlatCommentlistActivity::class.java),
+            Experiment(R.drawable.ic_vertical_align_center, "Flat Comment List", "A list of comments that's pretty conventional", ExperimentState.FAILED, FlatCommentlistActivity::class.java),
 
             ExperimentCategory("Physics Based Animations"),
             Experiment(R.drawable.ic_touch_app, "Spring Animation", "A circle that springs back to the original position", ExperimentState.COMPLETED, SpringAnimActivity::class.java),
