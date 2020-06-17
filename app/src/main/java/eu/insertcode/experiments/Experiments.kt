@@ -44,6 +44,7 @@ object Experiments {
             Experiment(R.drawable.ic_clap, "Clapp", "The revolutionary app for clapping with just one hand!", ExperimentState.COMPLETED, ClappActivity::class.java),
             Experiment(R.drawable.ic_looks, "CircularText", "Circular Text, required for Clapp.", ExperimentState.COMPLETED, CurvedTextActivity::class.java),
 
+            ExperimentCategory("Camera"),
             ExperimentCategory("Comments"),
             Experiment(R.drawable.ic_vertical_align_center, "Flat Comment List", "A list of comments that's pretty conventional", ExperimentState.FAILED, FlatCommentlistActivity::class.java),
 

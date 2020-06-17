@@ -4,7 +4,8 @@ This project is my main project for Android experiments.
 These experiments can be:
 - Awesome animations
 - Cool UI components
-- New Android API features 
+- New Android API features
+- New frameworks
 - New AndroidX library stuff
 - App architectures like MVVM (including Architexcture Components and/or DataBinding)
 - Or whatever the hell I want to try out
@@ -12,7 +13,7 @@ These experiments can be:
 
 # Licence
 ```
-   Copyright 2018 Maarten de Goede
+   Copyright 2020 Maarten de Goede
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
