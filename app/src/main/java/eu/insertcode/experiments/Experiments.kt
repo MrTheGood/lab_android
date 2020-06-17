@@ -16,22 +16,22 @@
 
 package eu.insertcode.experiments
 
-import eu.insertcode.androidpexperiment.DesignLibraryV28Activity
-import eu.insertcode.androidpexperiment.FingerprintDialogActivity
-import eu.insertcode.architectureexperiment.databinding.view.activity.ArchitectureComponentsDataBindingActivity
-import eu.insertcode.architectureexperiment.normal.view.activity.ArchitectureComponentsActivity
-import eu.insertcode.clapp.ClappActivity
-import eu.insertcode.clapp.CurvedTextActivity
-import eu.insertcode.experiment.designcommentsexperiment.FlatCommentlistActivity
-import eu.insertcode.experiment.multiplethemes.NightModeThemeActivity
-import eu.insertcode.experiment.physicsbasedanimations.ChangingAnimActivity
-import eu.insertcode.experiment.physicsbasedanimations.CombinedFlingSpringAnimActivity
-import eu.insertcode.experiment.physicsbasedanimations.FlingAnimActivity
-import eu.insertcode.experiment.physicsbasedanimations.SpringAnimActivity
 import eu.insertcode.experiments.model.Experiment
 import eu.insertcode.experiments.model.ExperimentCategory
 import eu.insertcode.experiments.model.ExperimentState
-import eu.insertcode.otherexperiments.SideSheetDrawerActivity
+import eu.insertcode.lab.architecture.databinding.view.activity.ArchitectureComponentsDataBindingActivity
+import eu.insertcode.lab.architecture.normal.view.activity.ArchitectureComponentsActivity
+import eu.insertcode.lab.clapp.ClappActivity
+import eu.insertcode.lab.clapp.CurvedTextActivity
+import eu.insertcode.lab.designcomments.FlatCommentlistActivity
+import eu.insertcode.lab.multiplethemes.NightModeThemeActivity
+import eu.insertcode.lab.other.SideSheetDrawerActivity
+import eu.insertcode.lab.physicsbasedanimations.ChangingAnimActivity
+import eu.insertcode.lab.physicsbasedanimations.CombinedFlingSpringAnimActivity
+import eu.insertcode.lab.physicsbasedanimations.FlingAnimActivity
+import eu.insertcode.lab.physicsbasedanimations.SpringAnimActivity
+import eu.insertcode.lab.pie.DesignLibraryV28Activity
+import eu.insertcode.lab.pie.FingerprintDialogActivity
 
 /**
  * Created by maarten on 2018-04-03.

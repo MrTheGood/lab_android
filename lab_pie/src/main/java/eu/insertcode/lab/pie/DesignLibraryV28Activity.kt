@@ -1,5 +1,5 @@
 /*
- *    Copyright 2019 Maarten de Goede
+ *    Copyright 2020 Maarten de Goede
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -14,11 +14,18 @@
  *    limitations under the License.
  */
 
-include ':app',
-        ':lab_architecture',
-        ':lab_clapp',
-        ':lab_commentsdesign',
-        ':lab_multiplethemes',
-        ':lab_other',
-        ':lab_physicsbasedanimations',
-        ':lab_pie'
+package eu.insertcode.lab.pie
+
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_design_library_v28.*
+
+class DesignLibraryV28Activity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_design_library_v28)
+
+        appbar.replaceMenu(R.menu.menu)
+    }
+}

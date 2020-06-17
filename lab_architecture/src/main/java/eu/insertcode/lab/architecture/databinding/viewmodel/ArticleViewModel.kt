@@ -14,11 +14,24 @@
  *    limitations under the License.
  */
 
-include ':app',
-        ':lab_architecture',
-        ':lab_clapp',
-        ':lab_commentsdesign',
-        ':lab_multiplethemes',
-        ':lab_other',
-        ':lab_physicsbasedanimations',
-        ':lab_pie'
+package eu.insertcode.lab.architecture.databinding.viewmodel
+
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import eu.insertcode.lab.architecture.DemoContent
+import eu.insertcode.lab.architecture.data.Article
+
+class ArticleViewModel : ViewModel() {
+    val articles = MutableLiveData<List<Article>>()
+    val selectedArticle = MutableLiveData<Article>()
+
+
+    fun init() {
+        articles.value = DemoContent.articles
+        //todo: load from cache
+    }
+
+    fun select(position: Int) {
+        selectedArticle.value = articles.value?.getOrNull(position)
+    }
+}

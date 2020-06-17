@@ -1,5 +1,5 @@
 /*
- *    Copyright 2019 Maarten de Goede
+ *    Copyright 2020 Maarten de Goede
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -14,11 +14,18 @@
  *    limitations under the License.
  */
 
-include ':app',
-        ':lab_architecture',
-        ':lab_clapp',
-        ':lab_commentsdesign',
-        ':lab_multiplethemes',
-        ':lab_other',
-        ':lab_physicsbasedanimations',
-        ':lab_pie'
+package eu.insertcode.lab.designcomments.data
+
+import androidx.annotation.DrawableRes
+
+/**
+ * Created by maartendegoede on 2019-01-29.
+ * Copyright © 2019 insertCode.eu. All rights reserved.
+ */
+data class Comment(
+        val id: Int,
+        val name: String,
+        val text: String,
+        val date: String,
+        @DrawableRes val image: Int
+)

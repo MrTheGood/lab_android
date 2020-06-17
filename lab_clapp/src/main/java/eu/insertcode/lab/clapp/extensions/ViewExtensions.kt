@@ -14,11 +14,21 @@
  *    limitations under the License.
  */
 
-include ':app',
-        ':lab_architecture',
-        ':lab_clapp',
-        ':lab_commentsdesign',
-        ':lab_multiplethemes',
-        ':lab_other',
-        ':lab_physicsbasedanimations',
-        ':lab_pie'
+package eu.insertcode.lab.clapp.extensions
+
+import android.widget.SeekBar
+
+/**
+ * Created by maartendegoede on 2019-03-24.
+ * Copyright © 2019 insertCode.eu. All rights reserved.
+ */
+open class SimpleOnSeekBarChangeListener : SeekBar.OnSeekBarChangeListener {
+    override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
+    }
+
+    override fun onStartTrackingTouch(seekBar: SeekBar) {
+    }
+
+    override fun onStopTrackingTouch(seekBar: SeekBar) {
+    }
+}

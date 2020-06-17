@@ -1,5 +1,5 @@
 /*
- *    Copyright 2019 Maarten de Goede
+ *    Copyright 2018 Maarten de Goede
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -14,11 +14,15 @@
  *    limitations under the License.
  */
 
-include ':app',
-        ':lab_architecture',
-        ':lab_clapp',
-        ':lab_commentsdesign',
-        ':lab_multiplethemes',
-        ':lab_other',
-        ':lab_physicsbasedanimations',
-        ':lab_pie'
+package eu.insertcode.lab.architecture.data
+
+/**
+ * Created by maartendegoede on 12/06/2018.
+ * Copyright © 2018 insertcode.eu. All rights reserved.
+ */
+data class Article(
+        val id: Int,
+        val thumbnailUrl: String,
+        val title: String,
+        val article: String
+)
