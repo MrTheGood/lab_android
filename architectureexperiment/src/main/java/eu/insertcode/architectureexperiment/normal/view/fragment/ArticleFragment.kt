@@ -36,7 +36,7 @@ class ArticleFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         viewModel = ViewModelProviders.of(requireActivity())[ArticleViewModel::class.java]
-        viewModel.selectedArticle.observe(this, Observer<Article> { article ->
+        viewModel.selectedArticle.observe(this, Observer { article ->
             view!!.apply {
                 Glide.with(arch_article_thumbnail).load(article?.thumbnailUrl).into(arch_article_thumbnail)
                 arch_article_title.text = article?.title

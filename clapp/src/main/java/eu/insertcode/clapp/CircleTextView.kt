@@ -20,6 +20,9 @@ import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
+import kotlin.math.abs
+import kotlin.math.max
+import kotlin.math.min
 
 
 /**
@@ -40,13 +43,13 @@ class CircleTextView(
     private val startColor: Int
     private val endColor: Int
     private val textPath by lazy { Path() }
-    var text: String = ""
+    private var text: String = ""
         set(value) {
             field = value.replace("\n", " ")
         }
     var textRadius = 0
         set(value) {
-            field = Math.min(360, Math.max(-360, value))
+            field = min(360, max(-360, value))
             postInvalidate()
         }
 
@@ -76,7 +79,7 @@ class CircleTextView(
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        val circumference = (paint.measureText(text) + paint.strokeWidth * 2f) * 360f / Math.abs(textRadius)
+        val circumference = (paint.measureText(text) + paint.strokeWidth * 2f) * 360f / abs(textRadius)
         val diameter = circumference / Math.PI.toFloat()
 
 

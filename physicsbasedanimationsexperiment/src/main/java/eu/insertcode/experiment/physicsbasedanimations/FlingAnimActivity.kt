@@ -25,6 +25,7 @@ import androidx.core.view.GestureDetectorCompat
 import androidx.dynamicanimation.animation.DynamicAnimation
 import androidx.dynamicanimation.animation.FlingAnimation
 import kotlinx.android.synthetic.main.activity_fling_anim.*
+import kotlin.math.abs
 
 class FlingAnimActivity : AppCompatActivity() {
     companion object {
@@ -42,8 +43,8 @@ class FlingAnimActivity : AppCompatActivity() {
         val gestureDetector = GestureDetectorCompat(this, object : GestureDetector.SimpleOnGestureListener() {
             override fun onDown(e: MotionEvent?) = true
             override fun onFling(downEvent: MotionEvent, moveEvent: MotionEvent, velocityX: Float, velocityY: Float): Boolean {
-                val distanceX = Math.abs(downEvent.rawX - moveEvent.rawX)
-                val distanceY = Math.abs(downEvent.rawY - moveEvent.rawY)
+                val distanceX = abs(downEvent.rawX - moveEvent.rawX)
+                val distanceY = abs(downEvent.rawY - moveEvent.rawY)
 
                 if (distanceX > MIN_DISTANCE_MOVED) {
                     FlingAnimation(animatedFlingView, DynamicAnimation.TRANSLATION_X).apply {

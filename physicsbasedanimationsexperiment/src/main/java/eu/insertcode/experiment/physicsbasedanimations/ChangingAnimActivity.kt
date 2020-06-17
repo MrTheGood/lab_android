@@ -33,13 +33,13 @@ class ChangingAnimActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dynamic_animation)
 
-        animationX = SpringAnimation<View>(animatedDynamicView, object : FloatPropertyCompat<View>("translationX") {
+        animationX = SpringAnimation(animatedDynamicView, object : FloatPropertyCompat<View>("translationX") {
             override fun getValue(v: View) = v.translationX
             override fun setValue(v: View, value: Float) {
                 v.translationX = value
             }
         })
-        animationY = SpringAnimation<View>(animatedDynamicView, object : FloatPropertyCompat<View>("translationY") {
+        animationY = SpringAnimation(animatedDynamicView, object : FloatPropertyCompat<View>("translationY") {
             override fun getValue(v: View) = v.translationY
             override fun setValue(v: View, value: Float) {
                 v.translationY = value

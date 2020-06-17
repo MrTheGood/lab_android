@@ -26,7 +26,7 @@ import kotlinx.android.synthetic.main.activity_night_mode_theme.*
 
 class NightModeThemeActivity : AppCompatActivity() {
 
-    lateinit var sharedPreferences: SharedPreferences
+    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         sharedPreferences = getSharedPreferences("MultipleThemesExperiment", Context.MODE_PRIVATE)

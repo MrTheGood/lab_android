@@ -80,7 +80,7 @@ class FingerprintDialogActivity : AppCompatActivity() {
         AlertDialog.Builder(this)
                 .setTitle("Error")
                 .setMessage(message)
-                .setPositiveButton("GOT IT", { _, _ -> finish() })
+                .setPositiveButton("GOT IT") { _, _ -> finish() }
                 .show()
     }
 }

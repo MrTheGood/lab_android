@@ -24,7 +24,7 @@ import eu.insertcode.architectureexperiment.normal.view.fragment.ArticleFragment
 import eu.insertcode.architectureexperiment.normal.view.fragment.ArticleListFragment
 
 class ArchitectureComponentsActivity : AppCompatActivity() {
-    var currentFragment: Fragment? = null
+    private var currentFragment: Fragment? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
