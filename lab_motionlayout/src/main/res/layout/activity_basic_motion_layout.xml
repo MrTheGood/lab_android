@@ -20,8 +20,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layoutDescription="@xml/activity_basic_motion_layout_scene"
+    app:layoutDescription="@xml/scene_activity_basic_motion_layout"
     tools:context=".BasicMotionLayoutActivity"
     >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="#ff0000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="315dp"
+        />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
