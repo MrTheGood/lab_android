@@ -24,6 +24,7 @@ import eu.insertcode.lab.architecture.normal.view.activity.ArchitectureComponent
 import eu.insertcode.lab.clapp.ClappActivity
 import eu.insertcode.lab.clapp.CurvedTextActivity
 import eu.insertcode.lab.designcomments.FlatCommentlistActivity
+import eu.insertcode.lab.motionlayout.BasicMotionLayoutActivity
 import eu.insertcode.lab.multiplethemes.NightModeThemeActivity
 import eu.insertcode.lab.other.SideSheetDrawerActivity
 import eu.insertcode.lab.physicsbasedanimations.ChangingAnimActivity
@@ -48,6 +49,8 @@ object Experiments {
             ExperimentCategory("Comments"),
             Experiment(R.drawable.ic_vertical_align_center, "Flat Comment List", "A list of comments that's pretty conventional", ExperimentState.FAILED, FlatCommentlistActivity::class.java),
 
+            ExperimentCategory("Animations"),
+            Experiment(R.drawable.ic_motion, "Basic MotionLayout Animation", "...", ExperimentState.DEVELOPMENT, BasicMotionLayoutActivity::class.java),
             ExperimentCategory("Physics Based Animations"),
             Experiment(R.drawable.ic_touch_app, "Spring Animation", "A circle that springs back to the original position", ExperimentState.COMPLETED, SpringAnimActivity::class.java),
             Experiment(R.drawable.ic_toll, "Fling Animation", "A circle which you can fling to any position", ExperimentState.COMPLETED, FlingAnimActivity::class.java),
